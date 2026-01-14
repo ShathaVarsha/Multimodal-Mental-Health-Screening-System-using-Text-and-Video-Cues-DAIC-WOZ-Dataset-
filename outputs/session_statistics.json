@@ -1,0 +1,16 @@
+{
+  "total_sessions": 4,
+  "total_turns": 592,
+  "session_ids": [
+    "302",
+    "303",
+    "304",
+    "305"
+  ],
+  "features": {
+    "text": 1,
+    "action_units": 6,
+    "pose": 6,
+    "gaze": 6
+  }
+}

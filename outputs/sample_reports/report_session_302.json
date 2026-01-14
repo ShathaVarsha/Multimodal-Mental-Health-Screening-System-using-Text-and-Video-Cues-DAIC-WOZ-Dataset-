@@ -1,0 +1,18 @@
+{
+  "session_id": 302,
+  "date": "2025-12-29 00:16:31",
+  "phq8_score": 4.0,
+  "predicted_score": 3.9448375701904297,
+  "severity": "Minimal Depression",
+  "phq_range": "0-4",
+  "description": "Your responses indicate minimal or no symptoms of depression.",
+  "summary": "Based on your responses, you appear to be experiencing minimal symptoms of depression. This is a positive indicator of your current mental health status.",
+  "recommendations": [
+    "Continue maintaining healthy lifestyle habits",
+    "Stay connected with supportive friends and family",
+    "Engage in regular physical activity",
+    "Practice stress management techniques",
+    "Maintain a regular sleep schedule"
+  ],
+  "follow_up": "While your current assessment shows minimal symptoms, please don't hesitate to reach out for support if you notice changes in your mood or functioning."
+}

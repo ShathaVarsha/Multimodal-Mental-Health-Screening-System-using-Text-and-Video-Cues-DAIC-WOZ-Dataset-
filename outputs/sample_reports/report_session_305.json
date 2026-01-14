@@ -1,0 +1,23 @@
+{
+  "session_id": 305,
+  "date": "2025-12-29 00:16:31",
+  "phq8_score": 7.0,
+  "predicted_score": 6.761732578277588,
+  "severity": "Mild Depression",
+  "phq_range": "5-9",
+  "description": "Your responses suggest mild symptoms of depression that may be affecting your daily life.",
+  "summary": "Your assessment indicates mild depressive symptoms. While these symptoms are manageable, they warrant attention and self-care strategies.",
+  "recommendations": [
+    "Consider talking to a mental health professional",
+    "Increase physical activity (aim for 30 min daily)",
+    "Practice mindfulness or meditation",
+    "Maintain social connections",
+    "Monitor your sleep patterns",
+    "Consider keeping a mood journal",
+    "Limit alcohol and caffeine intake"
+  ],
+  "follow_up": "We recommend monitoring your symptoms over the next few weeks. If symptoms persist or worsen, please consult with a healthcare provider.",
+  "behavioral_observations": [
+    "Limited positive facial expressions observed"
+  ]
+}

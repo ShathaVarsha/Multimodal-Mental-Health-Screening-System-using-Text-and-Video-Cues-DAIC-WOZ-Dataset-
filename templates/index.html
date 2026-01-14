@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Screening System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .chat-container {
+            height: 500px;
+            overflow-y: auto;
+            padding: 30px;
+            background: #f7f7f7;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message.system {
+            justify-content: flex-start;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message-bubble {
+            max-width: 70%;
+            padding: 15px 20px;
+            border-radius: 20px;
+            line-height: 1.5;
+        }
+
+        .message.system .message-bubble {
+            background: #667eea;
+            color: white;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message.user .message-bubble {
+            background: #e5e5ea;
+            color: #333;
+            border-bottom-right-radius: 5px;
+        }
+
+        .input-container {
+            padding: 20px 30px;
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 10px;
+        }
+
+        #userInput {
+            flex: 1;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #userInput:focus {
+            border-color: #667eea;
+        }
+
+        #sendBtn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        #sendBtn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        #sendBtn:active {
+            transform: translateY(0);
+        }
+
+        #sendBtn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .webcam-container {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background: #f0f0f0;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        #webcam {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .report-container {
+            display: none;
+            padding: 30px;
+        }
+
+        .report-card {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .score-display {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .score-display h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .score-display p {
+            font-size: 18px;
+        }
+
+        .report-text {
+            line-height: 1.8;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .start-screen {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .start-screen h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .start-screen p {
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .start-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .start-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .status-bar {
+            padding: 10px 30px;
+            background: #f0f0f0;
+            border-top: 1px solid #e0e0e0;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Empathetic message styling */
+        .empathetic-message {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-style: italic;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 Depression Screening System</h1>
+            <p>AI-Powered Multimodal Mental Health Assessment</p>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="start-screen">
+            <h2>Welcome to the Depression Screening Assessment</h2>
+            <p>
+                This is a confidential screening tool that uses conversational AI and behavioral analysis
+                to assess depression symptoms. The assessment will take approximately 5-10 minutes.
+                <br><br>
+                <strong>Note:</strong> This tool is for screening purposes only and is not a substitute
+                for professional medical advice, diagnosis, or treatment.
+            </p>
+            <button class="start-btn" onclick="startSession()">Begin Assessment</button>
+        </div>
+
+        <!-- Chat Interface -->
+        <div id="chatInterface" style="display: none;">
+            <div class="chat-container" id="chatContainer"></div>
+            
+            <div class="webcam-container" id="webcamContainer">
+                <video id="webcam" autoplay playsinline></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Type your response here..." disabled>
+                <button id="sendBtn" onclick="sendMessage()" disabled>Send</button>
+            </div>
+
+            <div class="status-bar" id="statusBar">
+                Initializing...
+            </div>
+        </div>
+
+        <!-- Report Screen -->
+        <div id="reportScreen" class="report-container">
+            <div class="score-display">
+                <h2 id="scoreValue">--</h2>
+                <p>PHQ-8 Depression Score (out of 24)</p>
+            </div>
+
+            <div class="report-card">
+                <h3 style="margin-bottom: 15px;">Assessment Report</h3>
+                <div class="report-text" id="reportText">
+                    Generating report...
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <button class="start-btn" onclick="location.reload()">Start New Assessment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let sessionId = null;
+        let currentQuestionId = null;
+        let webcamStream = null;
+
+        // Start new session
+        async function startSession() {
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('chatInterface').style.display = 'block';
+
+            try {
+                const response = await fetch('/start_session', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'}
+                });
+
+                const data = await response.json();
+                sessionId = data.session_id;
+                currentQuestionId = data.question_id;
+
+                // Display first question
+                addMessage('system', data.question);
+
+                // Enable input
+                document.getElementById('userInput').disabled = false;
+                document.getElementById('sendBtn').disabled = false;
+                document.getElementById('statusBar').textContent = 'Session started - Type your response';
+
+                // Focus input
+                document.getElementById('userInput').focus();
+
+                // Initialize webcam (optional)
+                // initWebcam();
+
+            } catch (error) {
+                console.error('Error starting session:', error);
+                alert('Failed to start session. Please refresh and try again.');
+            }
+        }
+
+        // Send user message
+        async function sendMessage() {
+            const input = document.getElementById('userInput');
+            const text = input.value.trim();
+
+            if (!text) return;
+
+            // Display user message
+            addMessage('user', text);
+
+            // Clear input
+            input.value = '';
+
+            // Disable input while processing
+            input.disabled = true;
+            document.getElementById('sendBtn').disabled = true;
+            document.getElementById('statusBar').textContent = 'Processing...';
+
+            try {
+                // Capture webcam frame (if enabled)
+                const webcamFrame = captureWebcamFrame();
+
+                // Send to server
+                const response = await fetch('/submit_response', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        session_id: sessionId,
+                        text: text,
+                        webcam_frame: webcamFrame
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.complete) {
+                    // Show report
+                    showReport(data);
+                } else {
+                    // Display empathetic message if provided
+                    if (data.empathetic_message) {
+                        setTimeout(() => {
+                            addMessage('system', data.empathetic_message, true);
+                        }, 300);
+                    }
+
+                    // If needs clarification, don't show next question yet
+                    if (!data.needs_clarification) {
+                        // Display next question after empathetic message
+                        setTimeout(() => {
+                            if (!data.empathetic_message.includes(data.question)) {
+                                addMessage('system', data.question);
+                            }
+                            currentQuestionId = data.question_id;
+                        }, data.empathetic_message ? 800 : 0);
+                    }
+
+                    // Re-enable input
+                    input.disabled = false;
+                    document.getElementById('sendBtn').disabled = false;
+                    
+                    // Update status bar
+                    if (data.current_score !== undefined) {
+                        document.getElementById('statusBar').textContent = `Current score: ${data.current_score}/24`;
+                    } else {
+                        document.getElementById('statusBar').textContent = 'Please provide a more specific answer';
+                    }
+
+                    // Re-enable input
+                    input.disabled = false;
+                    document.getElementById('sendBtn').disabled = false;
+
+                    // Focus input
+                    input.focus();
+                }
+
+            } catch (error) {
+                console.error('Error sending message:', error);
+                alert('Failed to send message. Please try again.');
+
+                // Re-enable input
+                input.disabled = false;
+                document.getElementById('sendBtn').disabled = false;
+                document.getElementById('statusBar').textContent = 'Error occurred';
+            }
+        }
+
+        // Add message to chat
+        function addMessage(type, text, isEmpathetic = false) {
+            const chatContainer = document.getElementById('chatContainer');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+
+            const bubbleDiv = document.createElement('div');
+            bubbleDiv.className = 'message-bubble';
+            
+            // Add empathetic styling if needed
+            if (isEmpathetic && type === 'system') {
+                bubbleDiv.classList.add('empathetic-message');
+            }
+            
+            bubbleDiv.textContent = text;
+
+            messageDiv.appendChild(bubbleDiv);
+            chatContainer.appendChild(messageDiv);
+
+            // Scroll to bottom
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Show final report
+        function showReport(data) {
+            document.getElementById('chatInterface').style.display = 'none';
+            document.getElementById('reportScreen').style.display = 'block';
+
+            document.getElementById('scoreValue').textContent = data.phq8_score;
+            document.getElementById('reportText').textContent = data.report;
+
+            // Stop webcam
+            if (webcamStream) {
+                webcamStream.getTracks().forEach(track => track.stop());
+            }
+        }
+
+        // Initialize webcam (optional)
+        async function initWebcam() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { width: 640, height: 480 } 
+                });
+
+                const video = document.getElementById('webcam');
+                video.srcObject = stream;
+                webcamStream = stream;
+
+                document.getElementById('webcamContainer').style.display = 'block';
+                console.log('Webcam initialized');
+
+            } catch (error) {
+                console.warn('Webcam access denied or not available:', error);
+            }
+        }
+
+        // Capture webcam frame
+        function captureWebcamFrame() {
+            if (!webcamStream) return null;
+
+            try {
+                const video = document.getElementById('webcam');
+                const canvas = document.getElementById('canvas');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(video, 0, 0);
+
+                return canvas.toDataURL('image/jpeg', 0.8);
+            } catch (error) {
+                console.error('Error capturing webcam frame:', error);
+                return null;
+            }
+        }
+
+        // Allow Enter key to send
+        document.addEventListener('DOMContentLoaded', function() {
+            const input = document.getElementById('userInput');
+            if (input) {
+                input.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter' && !this.disabled) {
+                        sendMessage();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

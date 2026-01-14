@@ -1,0 +1,86 @@
+{
+  "minimal": {
+    "severity": "Minimal Depression",
+    "phq_range": "0-4",
+    "description": "Your responses indicate minimal or no symptoms of depression.",
+    "summary": "Based on your responses, you appear to be experiencing minimal symptoms of depression. This is a positive indicator of your current mental health status.",
+    "recommendations": [
+      "Continue maintaining healthy lifestyle habits",
+      "Stay connected with supportive friends and family",
+      "Engage in regular physical activity",
+      "Practice stress management techniques",
+      "Maintain a regular sleep schedule"
+    ],
+    "follow_up": "While your current assessment shows minimal symptoms, please don't hesitate to reach out for support if you notice changes in your mood or functioning."
+  },
+  "mild": {
+    "severity": "Mild Depression",
+    "phq_range": "5-9",
+    "description": "Your responses suggest mild symptoms of depression that may be affecting your daily life.",
+    "summary": "Your assessment indicates mild depressive symptoms. While these symptoms are manageable, they warrant attention and self-care strategies.",
+    "recommendations": [
+      "Consider talking to a mental health professional",
+      "Increase physical activity (aim for 30 min daily)",
+      "Practice mindfulness or meditation",
+      "Maintain social connections",
+      "Monitor your sleep patterns",
+      "Consider keeping a mood journal",
+      "Limit alcohol and caffeine intake"
+    ],
+    "follow_up": "We recommend monitoring your symptoms over the next few weeks. If symptoms persist or worsen, please consult with a healthcare provider."
+  },
+  "moderate": {
+    "severity": "Moderate Depression",
+    "phq_range": "10-14",
+    "description": "Your responses indicate moderate symptoms of depression that are likely impacting your daily functioning.",
+    "summary": "Your assessment shows moderate depressive symptoms that warrant professional attention. These symptoms may be significantly affecting your quality of life.",
+    "recommendations": [
+      "Schedule an appointment with a mental health professional",
+      "Consider evidence-based therapies (CBT, IPT)",
+      "Discuss treatment options with your doctor",
+      "Reach out to trusted friends or family for support",
+      "Engage in structured daily activities",
+      "Prioritize self-care and healthy routines",
+      "Join a support group if available",
+      "Avoid isolation and maintain social connections"
+    ],
+    "follow_up": "Professional support is recommended. Please reach out to a mental health provider to discuss treatment options that may include therapy and/or medication."
+  },
+  "moderately_severe": {
+    "severity": "Moderately Severe Depression",
+    "phq_range": "15-19",
+    "description": "Your responses suggest moderately severe symptoms of depression that are significantly affecting your life.",
+    "summary": "Your assessment indicates moderately severe depression. Professional treatment is strongly recommended to help you manage these symptoms effectively.",
+    "recommendations": [
+      "Seek professional help immediately",
+      "Contact your healthcare provider or therapist",
+      "Consider both therapy and medication options",
+      "Inform trusted family members or friends about your situation",
+      "Avoid making major life decisions while experiencing these symptoms",
+      "Create a safety plan with your healthcare provider",
+      "Attend all scheduled appointments",
+      "Consider intensive outpatient programs if recommended"
+    ],
+    "follow_up": "Immediate professional support is strongly recommended. Please contact a mental health provider as soon as possible. If you have thoughts of self-harm, please call a crisis hotline immediately.",
+    "crisis_resources": true
+  },
+  "severe": {
+    "severity": "Severe Depression",
+    "phq_range": "20-24",
+    "description": "Your responses indicate severe symptoms of depression requiring immediate professional attention.",
+    "summary": "Your assessment shows severe depression. It is crucial that you receive professional help immediately. You do not have to face this alone - effective treatments are available.",
+    "recommendations": [
+      "Seek immediate professional help",
+      "Contact emergency services if you have thoughts of self-harm",
+      "Reach out to a crisis hotline",
+      "Inform family members or close friends",
+      "Do not be alone - stay with trusted individuals",
+      "Follow all treatment recommendations from healthcare providers",
+      "Consider hospitalization if recommended",
+      "Engage with intensive treatment programs"
+    ],
+    "follow_up": "Immediate intervention is critical. Please contact emergency services or a crisis hotline if you are experiencing thoughts of self-harm. Professional treatment including therapy and medication is essential.",
+    "crisis_resources": true,
+    "urgent": true
+  }
+}

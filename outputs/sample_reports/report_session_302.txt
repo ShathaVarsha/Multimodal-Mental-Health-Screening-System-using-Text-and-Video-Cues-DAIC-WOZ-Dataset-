@@ -1,0 +1,37 @@
+======================================================================
+DEPRESSION ASSESSMENT REPORT
+======================================================================
+
+Session ID: 302
+Date: 2025-12-29 00:16:31
+
+PHQ-8 Score: 4.0 (0-4)
+Predicted Score: 3.9
+
+──────────────────────────────────────────────────────────────────────
+SEVERITY: MINIMAL DEPRESSION
+──────────────────────────────────────────────────────────────────────
+
+Your responses indicate minimal or no symptoms of depression.
+
+Based on your responses, you appear to be experiencing minimal symptoms of depression. This is a positive indicator of your current mental health status.
+
+──────────────────────────────────────────────────────────────────────
+RECOMMENDATIONS:
+──────────────────────────────────────────────────────────────────────
+• Continue maintaining healthy lifestyle habits
+• Stay connected with supportive friends and family
+• Engage in regular physical activity
+• Practice stress management techniques
+• Maintain a regular sleep schedule
+
+──────────────────────────────────────────────────────────────────────
+FOLLOW-UP:
+──────────────────────────────────────────────────────────────────────
+While your current assessment shows minimal symptoms, please don't hesitate to reach out for support if you notice changes in your mood or functioning.
+
+======================================================================
+This assessment is for informational purposes only and does not
+constitute a clinical diagnosis. Please consult with a qualified
+mental health professional for proper evaluation and treatment.
+======================================================================

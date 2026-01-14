@@ -1,0 +1,44 @@
+======================================================================
+DEPRESSION ASSESSMENT REPORT
+======================================================================
+
+Session ID: 304
+Date: 2025-12-29 00:16:31
+
+PHQ-8 Score: 6.0 (5-9)
+Predicted Score: 6.1
+
+──────────────────────────────────────────────────────────────────────
+SEVERITY: MILD DEPRESSION
+──────────────────────────────────────────────────────────────────────
+
+Your responses suggest mild symptoms of depression that may be affecting your daily life.
+
+Your assessment indicates mild depressive symptoms. While these symptoms are manageable, they warrant attention and self-care strategies.
+
+──────────────────────────────────────────────────────────────────────
+BEHAVIORAL OBSERVATIONS:
+──────────────────────────────────────────────────────────────────────
+• Facial expressions showing signs of sadness or distress
+
+──────────────────────────────────────────────────────────────────────
+RECOMMENDATIONS:
+──────────────────────────────────────────────────────────────────────
+• Consider talking to a mental health professional
+• Increase physical activity (aim for 30 min daily)
+• Practice mindfulness or meditation
+• Maintain social connections
+• Monitor your sleep patterns
+• Consider keeping a mood journal
+• Limit alcohol and caffeine intake
+
+──────────────────────────────────────────────────────────────────────
+FOLLOW-UP:
+──────────────────────────────────────────────────────────────────────
+We recommend monitoring your symptoms over the next few weeks. If symptoms persist or worsen, please consult with a healthcare provider.
+
+======================================================================
+This assessment is for informational purposes only and does not
+constitute a clinical diagnosis. Please consult with a qualified
+mental health professional for proper evaluation and treatment.
+======================================================================
