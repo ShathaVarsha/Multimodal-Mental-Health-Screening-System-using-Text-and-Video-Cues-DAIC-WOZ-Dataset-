@@ -2,7 +2,7 @@
 =================================================================
 STEP 1: DATA PREPARATION
 =================================================================
-Extract and prepare data from all sessions (300-305)
+Extract and prepare data from all sessions (train: 303,304,305,310,312,313,315,316,317; test: 300,301)
 
 This script:
 1. Loads transcript data (text conversations)
@@ -12,10 +12,10 @@ This script:
 5. Saves prepared dataset for next steps
 
 Inputs:
-  - data/300-305/ (raw session files)
-  - dev_split_Depression_AVEC2017.csv
-  - train_split_Depression_AVEC2017.csv
-  - test_split_Depression_AVEC2017.csv
+    - data/303,304,305,310,312,313,315,316,317/ (raw train session files)
+    - data/300,301/ (raw test session files)
+    - train_split_Depression_AVEC2017.csv
+    - test_split_Depression_AVEC2017.csv
 
 Outputs:
   - outputs/prepared_data.pkl (synchronized multimodal dataset)
@@ -59,31 +59,7 @@ class DataPreparation:
         
         all_labels = []
         
-        # Session 302 - Dev split
-        if DEV_SPLIT_FILE.exists():
-            df_dev = pd.read_csv(DEV_SPLIT_FILE)
-            print(f"✓ Dev split loaded: {len(df_dev)} rows")
-            print(f"  Columns: {list(df_dev.columns)}")
-            
-            # Filter for session 302
-            # Try different possible column names
-            id_col = None
-            for col in df_dev.columns:
-                if any(x in col.lower() for x in ['participant', 'session', 'id']):
-                    id_col = col
-                    break
-            
-            if id_col:
-                session_302 = df_dev[df_dev[id_col].astype(str) == "302"]
-                if len(session_302) > 0:
-                    session_302 = session_302.copy()
-                    session_302["session_id"] = "302"
-                    all_labels.append(session_302)
-                    print(f"  ✓ Session 302 PHQ-8 loaded")
-            else:
-                print(f"  ⚠ Could not find ID column in dev split")
-        else:
-            print(f"❌ Dev split file not found: {DEV_SPLIT_FILE}")
+
         
         # Sessions 303, 304, 305 - Train split
         if TRAIN_SPLIT_FILE.exists():
@@ -178,7 +154,6 @@ class DataPreparation:
             else:
                 df_participant = df.copy()
                 df_ellie = pd.DataFrame()
-            
             # Clean text
             df_participant[text_col] = df_participant[text_col].astype(str).str.strip()
             df_participant = df_participant[df_participant[text_col].str.len() > 0]

@@ -512,14 +512,74 @@
 
         <!-- Start Screen -->
         <div id="startScreen" class="start-screen">
-            <h2>Welcome to the Depression Screening Assessment</h2>
+            <h2>Welcome to the Mental Health Screening</h2>
             <p>
                 This is a confidential screening tool that uses conversational AI and behavioral analysis
-                to assess depression symptoms. The assessment will take approximately 5-10 minutes.
+                to assess depression and PTSD symptoms. The assessment will take approximately 5-10 minutes.
                 <br><br>
                 <strong>Note:</strong> This tool is for screening purposes only and is not a substitute
                 for professional medical advice, diagnosis, or treatment.
             </p>
+            <div style="margin-bottom: 20px;">
+                <label style="font-weight:600;">Choose Screening Type:</label><br>
+                <input type="radio" id="depressionType" name="screeningType" value="depression" checked>
+                <label for="depressionType">Depression (Video + Chat)</label><br>
+                <input type="radio" id="ptsdType" name="screeningType" value="ptsd">
+                <label for="ptsdType">PTSD (Chat Only)</label>
+            </div>
+            <div id="depressionIntakeFields" style="display:block; margin-bottom:20px;">
+                <label for="depAge" style="font-weight:600;">Your Age:</label><br>
+                <input type="number" id="depAge" min="5" max="120" placeholder="Enter your age" style="margin-bottom:10px; width:60%; padding:8px;"><br>
+                <label for="depGender" style="font-weight:600;">Gender:</label><br>
+                <select id="depGender" style="margin-bottom:10px; width:60%; padding:8px;">
+                    <option value="">Select</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <label style="font-weight:600;">Are you currently pregnant or postpartum?</label><br>
+                <select id="depPostpartum" style="margin-bottom:10px; width:60%; padding:8px;">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select><br>
+                <label style="font-weight:600;">Are you over 65 years old?</label><br>
+                <select id="depElderly" style="margin-bottom:10px; width:60%; padding:8px;">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select><br>
+                <label style="font-weight:600;">Are you under 18 years old?</label><br>
+                <select id="depChild" style="margin-bottom:10px; width:60%; padding:8px;">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select><br>
+                <label style="font-weight:600;">Are you currently receiving treatment for depression?</label><br>
+                <select id="depTreatment" style="width:60%; padding:8px;">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+            <div id="ptsdUserFields" style="display:none; margin-bottom:20px;">
+                <label for="ptsdName" style="font-weight:600;">Your Name:</label><br>
+                <input type="text" id="ptsdName" placeholder="Enter your name" style="margin-bottom:10px; width:60%; padding:8px;"><br>
+                <label for="ptsdOccupation" style="font-weight:600;">Your Occupation:</label><br>
+                <input type="text" id="ptsdOccupation" placeholder="Enter your occupation" style="margin-bottom:10px; width:60%; padding:8px;"><br>
+                <label for="ptsdTrauma" style="font-weight:600;">Briefly describe the most stressful event you want to focus on:</label><br>
+                <textarea id="ptsdTrauma" placeholder="Describe the event (optional)" style="margin-bottom:10px; width:60%; padding:8px; height:50px;"></textarea><br>
+                <label for="ptsdTimeSince" style="font-weight:600;">How long ago did this event occur?</label><br>
+                <select id="ptsdTimeSince" style="margin-bottom:10px; width:60%; padding:8px;">
+                    <option value="">Select timeframe</option>
+                    <option value="days">Days ago</option>
+                    <option value="weeks">Weeks ago</option>
+                    <option value="months">Months ago</option>
+                    <option value="years">Years ago</option>
+                </select><br>
+                <label for="ptsdSymptomTimeframe" style="font-weight:600;">Preferred symptom timeframe:</label><br>
+                <select id="ptsdSymptomTimeframe" style="width:60%; padding:8px;">
+                    <option value="month">Past month (standard)</option>
+                    <option value="week">Past week</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
             <button class="start-btn" onclick="startSession()">Begin Assessment</button>
         </div>
 
@@ -588,28 +648,115 @@
             facial_data: [],
             camera_enabled: false,
             realtime_feedback_enabled: false,
-            webcam_stream: null
+            webcam_stream: null,
+            screening_type: 'depression',
+            name: '',
+            occupation: ''
         };
 
+        // Show/hide intake fields based on screening type
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('depressionType').addEventListener('change', function() {
+                sessionData.screening_type = 'depression';
+                document.getElementById('ptsdUserFields').style.display = 'none';
+                document.getElementById('depressionIntakeFields').style.display = 'block';
+            });
+            document.getElementById('ptsdType').addEventListener('change', function() {
+                sessionData.screening_type = 'ptsd';
+                document.getElementById('ptsdUserFields').style.display = 'block';
+                document.getElementById('depressionIntakeFields').style.display = 'none';
+            });
+        });
+
         function startSession() {
-            fetch('/start_session', {
-                method: 'POST'
-            })
-            .then(response => response.json())
-            .then(data => {
-                sessionData.session_id = data.session_id;
-                document.getElementById('startScreen').style.display = 'none';
-                document.getElementById('chatInterface').style.display = 'block';
+            if (sessionData.screening_type === 'ptsd') {
+                sessionData.name = document.getElementById('ptsdName').value.trim();
+                sessionData.occupation = document.getElementById('ptsdOccupation').value.trim();
+                sessionData.trauma = document.getElementById('ptsdTrauma').value.trim();
+                sessionData.time_since = document.getElementById('ptsdTimeSince').value;
+                sessionData.symptom_timeframe = document.getElementById('ptsdSymptomTimeframe').value;
+            } else {
+                sessionData.dep_age = document.getElementById('depAge').value;
+                sessionData.dep_gender = document.getElementById('depGender').value;
+                sessionData.dep_postpartum = document.getElementById('depPostpartum').value;
+                sessionData.dep_elderly = document.getElementById('depElderly').value;
+                sessionData.dep_child = document.getElementById('depChild').value;
+                sessionData.dep_treatment = document.getElementById('depTreatment').value;
+            }
+            // ...existing code for starting session...
+        }
+
+        // Update screening type on selection
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('depressionType').addEventListener('change', function() {
+                sessionData.screening_type = 'depression';
+            });
+            document.getElementById('ptsdType').addEventListener('change', function() {
+                sessionData.screening_type = 'ptsd';
+            });
+            document.getElementById('userInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+        });
+
+        function startSession() {
+            // Hide start screen, show chat interface
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('chatInterface').style.display = 'block';
+
+            if (sessionData.screening_type === 'depression') {
                 document.getElementById('cameraControls').style.display = 'flex';
-                
                 // Show camera modal
                 setTimeout(() => {
                     showCameraModal();
                 }, 500);
-                
-                // Start asking questions
-                askNextQuestion();
-            });
+            } else {
+                document.getElementById('cameraControls').style.display = 'none';
+                document.getElementById('webcamPreview').style.display = 'none';
+            }
+
+            // Start backend session
+            if (sessionData.screening_type === 'depression') {
+                fetch('/start_depression_session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        age: sessionData.dep_age,
+                        gender: sessionData.dep_gender,
+                        postpartum: sessionData.dep_postpartum === 'yes',
+                        elderly: sessionData.dep_elderly === 'yes',
+                        child: sessionData.dep_child === 'yes',
+                        treatment: sessionData.dep_treatment === 'yes'
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    sessionData.session_id = data.session_id;
+                    sessionData.tools = data.tools;
+                    sessionData.current_tool_idx = 0;
+                    askNextDepressionQuestion();
+                });
+            } else {
+                fetch('/ptsd_start_session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: sessionData.name,
+                        occupation: sessionData.occupation,
+                        trauma: sessionData.trauma,
+                        time_since: sessionData.time_since,
+                        symptom_timeframe: sessionData.symptom_timeframe
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    sessionData.session_id = data.session_id;
+                    askNextQuestion();
+                });
+            }
         }
 
         function showCameraModal() {
@@ -692,88 +839,286 @@
         }
 
         function askNextQuestion() {
-            fetch(`/get_question?session_id=${sessionData.session_id}`)
+            if (sessionData.screening_type === 'ptsd') {
+                fetch(`/ptsd_get_question?session_id=${sessionData.session_id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.complete) {
+                            fetch('/ptsd_submit_response', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ session_id: sessionData.session_id, answer: '' })
+                            })
+                            .then(response => response.json())
+                            .then(finalData => {
+                                if (finalData.complete) {
+                                    showPTSDCompletion(finalData);
+                                } else {
+                                    showPTSDReport();
+                                }
+                            });
+                        } else {
+                            addMessage('system', data.question);
+                            if (data.options) {
+                                showPTSDOptions(data.options);
+                            }
+                            document.getElementById('userInput').disabled = false;
+                            document.getElementById('sendBtn').disabled = false;
+                            document.getElementById('userInput').focus();
+                        }
+                    });
+            } else {
+                askNextDepressionQuestion();
+            }
+        }
+
+        // Multi-tool depression: fetch next question
+        function askNextDepressionQuestion() {
+            fetch(`/get_depression_question?session_id=${sessionData.session_id}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.complete) {
-                        showReport();
+                        showDepressionReport();
+                    } else if (data.switch_tool) {
+                        sessionData.current_tool_idx = sessionData.current_tool_idx + 1;
+                        addMessage('system', `Switching to next assessment: <b>${data.next_tool}</b>`);
+                        setTimeout(askNextDepressionQuestion, 1000);
                     } else {
-                        addMessage('system', data.question);
+                        addMessage('system', `<b>${data.tool}:</b> ${data.question}`);
+                        // If options are provided, show them as buttons
+                        if (data.options) {
+                            showDepressionOptions(data.options);
+                        } else {
+                            removeDepressionOptions();
+                        }
                         document.getElementById('userInput').disabled = false;
                         document.getElementById('sendBtn').disabled = false;
                         document.getElementById('userInput').focus();
-                        
-                        updateStatusBar(data.progress);
+                        updateDepressionStatusBar(data.progress);
                     }
                 });
+        }
+
+        // Depression: show options as buttons
+        function showDepressionOptions(options) {
+            const container = document.getElementById('chatContainer');
+            // Remove any previous options
+            removeDepressionOptions();
+            const row = document.createElement('div');
+            row.id = 'depressionOptionsRow';
+            row.style.display = 'flex';
+            row.style.gap = '10px';
+            row.style.margin = '10px 0 20px 0';
+            options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.textContent = opt;
+                btn.className = 'modal-btn modal-btn-primary';
+                btn.onclick = function() { submitDepressionResponse(idx); };
+                row.appendChild(btn);
+            });
+            container.appendChild(row);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        // Depression: remove options row
+        function removeDepressionOptions() {
+            const old = document.getElementById('depressionOptionsRow');
+            if (old) old.remove();
+        }
+
+        // Depression: submit selected option
+        function submitDepressionResponse(optionIdx) {
+            removeDepressionOptions();
+            addMessage('user', `Selected: ${optionIdx + 1}`);
+            document.getElementById('userInput').disabled = true;
+            document.getElementById('sendBtn').disabled = true;
+            fetch('/submit_depression_response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: sessionData.session_id,
+                    response: optionIdx
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.complete) {
+                    showDepressionReport();
+                } else if (data.switch_tool) {
+                    sessionData.current_tool_idx = sessionData.current_tool_idx + 1;
+                    addMessage('system', `Switching to next assessment: <b>${data.next_tool}</b>`);
+                    setTimeout(askNextDepressionQuestion, 1000);
+                } else {
+                    setTimeout(askNextDepressionQuestion, 700);
+                }
+            });
+        }
+
+        function updateDepressionStatusBar(progress) {
+            const statusBar = document.getElementById('statusBar');
+            statusBar.textContent = `Tool ${progress.tool_idx} of ${progress.tool_total} | ${progress.tool}: Question ${progress.current} of ${progress.total}`;
         }
 
         function sendMessage() {
             const input = document.getElementById('userInput');
             const message = input.value.trim();
-            
             if (!message) return;
-            
-            // Disable input
             input.disabled = true;
             document.getElementById('sendBtn').disabled = true;
-            
-            // Show user message
             addMessage('user', message);
             input.value = '';
-            
-            // Capture webcam frame
-            const webcamFrame = captureWebcamFrame();
-            
-            // Send to server
-            fetch('/submit_response', {
+            if (sessionData.screening_type === 'ptsd') {
+                fetch('/ptsd_submit_response', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        session_id: sessionData.session_id,
+                        answer: message
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.clarify) {
+                        addMessage('system', data.message, true);
+                        document.getElementById('userInput').disabled = false;
+                        document.getElementById('sendBtn').disabled = false;
+                        document.getElementById('userInput').focus();
+                    } else {
+                        setTimeout(askNextQuestion, 700);
+                    }
+                });
+                return;
+            }
+            // Multi-tool depression: submit response
+            fetch('/submit_depression_response', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    response: message,
-                    webcam_frame: webcamFrame,
-                    session_id: sessionData.session_id
+                    session_id: sessionData.session_id,
+                    response: message
                 })
             })
             .then(response => response.json())
             .then(data => {
-                // Show empathetic message if present
+                if (data.complete) {
+                    showDepressionReport();
+                } else if (data.switch_tool) {
+                    sessionData.current_tool_idx = sessionData.current_tool_idx + 1;
+                    addMessage('system', `Switching to next assessment: <b>${data.next_tool}</b>`);
+                    setTimeout(askNextDepressionQuestion, 1000);
+                } else {
+                    setTimeout(askNextDepressionQuestion, 700);
+                }
+            });
+        }
+
+        // PTSD: show options as buttons
+        function showPTSDOptions(options) {
+            const container = document.getElementById('chatContainer');
+            // Remove any previous options
+            const old = document.getElementById('ptsdOptionsRow');
+            if (old) old.remove();
+            const row = document.createElement('div');
+            row.id = 'ptsdOptionsRow';
+            row.style.display = 'flex';
+            row.style.gap = '10px';
+            row.style.margin = '10px 0 20px 0';
+            options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.textContent = opt;
+                btn.className = 'modal-btn modal-btn-primary';
+                btn.onclick = function() { submitPTSDResponse(idx); };
+                row.appendChild(btn);
+            });
+            container.appendChild(row);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        // PTSD: submit selected option
+        function submitPTSDResponse(optionIdx) {
+            // Remove options row
+            const old = document.getElementById('ptsdOptionsRow');
+            if (old) old.remove();
+            // Show user message
+            addMessage('user', `Selected: ${optionIdx + 1}`);
+            fetch('/ptsd_submit_response', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    session_id: sessionData.session_id,
+                    answer: optionIdx
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
                 if (data.empathetic_message) {
                     addMessage('system', data.empathetic_message, true);
                 }
-                
-                // Show follow-up question if present
-                if (data.followup_question) {
-                    setTimeout(() => {
-                        addMessage('system', data.followup_question);
-                    }, 500);
-                }
-                
-                // Show real-time feedback if enabled
-                if (sessionData.realtime_feedback_enabled && data.facial_feedback) {
-                    showRealtimeFeedback(data.facial_feedback);
-                }
-                
-                // If needs clarification, don't advance
-                if (data.needs_clarification) {
-                    document.getElementById('userInput').disabled = false;
-                    document.getElementById('sendBtn').disabled = false;
-                    document.getElementById('userInput').focus();
-                } else {
-                    // Store response data
-                    sessionData.responses.push({
-                        question: data.question_text,
-                        answer: message,
-                        facial_features: data.facial_features,
-                        timestamp: new Date().toISOString()
-                    });
-                    
-                    // Ask next question
-                    setTimeout(askNextQuestion, 1000);
-                }
+                setTimeout(askNextQuestion, 700);
             });
+        }
+
+        // PTSD: show report (after countdown)
+        function showPTSDReport(suggestions) {
+            fetch('/ptsd_generate_report', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ session_id: sessionData.session_id })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('chatInterface').style.display = 'none';
+                document.getElementById('reportContainer').style.display = 'block';
+                // Show PTSD score and severity if available
+                if (data.score !== undefined && data.severity) {
+                    document.getElementById('finalScore').textContent = `${data.score}/80`;
+                    document.getElementById('severityLevel').textContent = data.severity;
+                } else {
+                    document.getElementById('finalScore').textContent = '--';
+                    document.getElementById('severityLevel').textContent = 'PTSD Screening Complete';
+                }
+                let html = '<div><b>Suggestions & Next Steps:</b><ul>';
+                if (suggestions && Array.isArray(suggestions)) {
+                    suggestions.forEach(s => { html += `<li>${s}</li>`; });
+                }
+                html += '</ul></div>';
+                html += '<div style="margin-top:15px;">You can now download your detailed PDF report below.</div>';
+                document.getElementById('reportText').innerHTML = html;
+            });
+        }
+        // PTSD: show thank you, countdown, and suggestions before report
+        function showPTSDCompletion(finalData) {
+            document.getElementById('userInput').disabled = true;
+            document.getElementById('sendBtn').disabled = true;
+            addMessage('system', finalData.message);
+            let countdown = finalData.countdown || 5;
+            let suggestions = finalData.suggestions || [];
+            // Store PTSD score/severity for report
+            sessionData.ptsd_score = finalData.score;
+            sessionData.ptsd_severity = finalData.severity;
+            // Show countdown in chat
+            let countdownMsg = document.createElement('div');
+            countdownMsg.className = 'message system';
+            countdownMsg.innerHTML = `<div class="message-bubble">Generating your report in <span id='ptsdCountdown'>${countdown}</span> seconds...</div>`;
+            document.getElementById('chatContainer').appendChild(countdownMsg);
+            let interval = setInterval(() => {
+                countdown--;
+                document.getElementById('ptsdCountdown').textContent = countdown;
+                if (countdown <= 0) {
+                    clearInterval(interval);
+                    // Pass score/severity to showPTSDReport
+                    showPTSDReport(suggestionsWithScore(suggestions));
+                }
+            }, 1000);
+        }
+
+        // Helper to add score/severity to suggestions for PTSD report
+        function suggestionsWithScore(suggestions) {
+            let arr = suggestions ? [...suggestions] : [];
+            if (sessionData.ptsd_score !== undefined && sessionData.ptsd_severity) {
+                arr.unshift(`Your total PTSD score: <b>${sessionData.ptsd_score}/80</b> (${sessionData.ptsd_severity})`);
+            }
+            return arr;
         }
 
         function addMessage(type, text, isEmpathetic = false) {
@@ -816,35 +1161,34 @@
             statusBar.textContent = `Question ${progress.current} of ${progress.total} | Current Score: ${progress.current_score}/24`;
         }
 
-        function showReport() {
-            // Stop webcam
-            if (sessionData.webcam_stream) {
-                sessionData.webcam_stream.getTracks().forEach(track => track.stop());
-            }
-            
-            fetch('/generate_report', {
+        function showDepressionReport() {
+            fetch('/generate_depression_report', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    session_id: sessionData.session_id,
-                    responses: sessionData.responses
-                })
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ session_id: sessionData.session_id })
             })
             .then(response => response.json())
             .then(data => {
                 document.getElementById('chatInterface').style.display = 'none';
                 document.getElementById('reportContainer').style.display = 'block';
-                
-                document.getElementById('finalScore').textContent = `${data.phq8_score}/24`;
-                document.getElementById('severityLevel').textContent = data.severity;
-                document.getElementById('reportText').innerHTML = data.report_html;
+                // Show scores and severity for all tools
+                let html = '<h3>Multi-Tool Depression Screening Results</h3>';
+                for (const [tool, result] of Object.entries(data.report)) {
+                    html += `<div style='margin-bottom:18px;'><b>${tool}:</b> Score: <b>${result.score}</b> | Severity: <b>${result.severity}</b></div>`;
+                }
+                html += '<div style="margin-top:15px;">You can now download your detailed PDF report below.</div>';
+                document.getElementById('finalScore').textContent = '--';
+                document.getElementById('severityLevel').textContent = 'Depression Screening Complete';
+                document.getElementById('reportText').innerHTML = html;
             });
         }
 
         function downloadReport() {
-            window.location.href = `/download_report/${sessionData.session_id}`;
+            if (sessionData.screening_type === 'ptsd') {
+                window.location.href = `/ptsd_download_report/${sessionData.session_id}`;
+            } else {
+                window.location.href = `/download_report/${sessionData.session_id}`;
+            }
         }
 
         // Enter key to send

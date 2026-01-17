@@ -1,6 +1,8 @@
-# 🚀 READY TO TRAIN - QUICK START
 
-## ⚡ FASTEST PATH TO WORKING SYSTEM
+# 🚀 READY TO TRAIN - QUICK START (Depression & PTSD)
+
+
+## ⚡ FASTEST PATH TO WORKING SYSTEM (DUAL-MODE: DEPRESSION & PTSD)
 
 ### Step 1: Install Dependencies (2 minutes)
 ```powershell
@@ -21,41 +23,64 @@ copy step8_web_enhanced.py step8_web_interface.py
 mkdir outputs\reports
 ```
 
-### Step 3: Train Models (30-60 minutes)
+
+
+### Step 3: Prepare Data & Train Models (30-60 minutes)
 ```powershell
-python step1_data_preparation.py
-python step2_feature_engineering.py
-python step5_model2b_visual_classifier.py
-python step6_model3_fusion.py
-python step7_model4_report_generator.py
+# Prepare data (uses new train/test split)
+python data_preparation_1.py
+python feature_engineering_2.py
+
+# Train models
+python visual_classifier_5.py
+python fusion_model_6.py
+python report_generator_7.py
 ```
+
+---
+
+## 📊 DATA SPLIT (IMPORTANT)
+
+- **Training sessions:** 303, 304, 305, 310, 312, 313, 315, 316, 317
+- **Test sessions:** 300, 301
+
+All scripts and CSVs use this split. Make sure your data folders and CSVs match this exactly.
+
 
 ### Step 4: Launch & Test (1 minute)
 ```powershell
-python step8_web_interface.py
+python step8_web_enhanced.py
 ```
 Open browser: **http://127.0.0.1:5000**
+
+On the start screen, select your screening type:
+- **Depression (Video + Chat):** Adaptive questions, facial analysis (webcam required), and PDF report.
+- **PTSD (Chat Only):** All PCL/PCL-5 questions, option-based chat (no webcam needed), and PTSD PDF report.
 
 ---
 
 ## ✅ WHAT YOU GET
 
-✓ **Camera Permission Modal** - Privacy-first approach
-✓ **Enable/Disable Camera** - User control
-✓ **Real-time Feedback Toggle** - Optional, non-distracting
-✓ **Facial Behavior Tracking** - 34 features per answer
+
+✓ **Screening Type Selection** - Choose between Depression (video+chat) and PTSD (chat-only)
+✓ **Camera Permission Modal** - Privacy-first approach (depression only)
+✓ **Enable/Disable Camera** - User control (depression only)
+✓ **Real-time Feedback Toggle** - Optional, non-distracting (depression only)
+✓ **Facial Behavior Tracking** - 34 features per answer (depression only)
 ✓ **Empathetic Responses** - Human-like conversation
-✓ **Answer Validation** - Re-prompts vague answers
-✓ **Comprehensive PDF Reports** - Clinical-grade with graphs
-✓ **Confidence Scores** - Model transparency
+✓ **Answer Validation** - Re-prompts vague answers (depression only)
+✓ **Comprehensive PDF Reports** - Clinical-grade with graphs (both modes)
+✓ **PTSD PDF Report** - All PCL/PCL-5 questions, severity, and recommendations
+✓ **Confidence Scores** - Model transparency (depression only)
 
 ---
 
 ## 📄 FILES YOU NEED
 
+
 ### Core Enhanced Files (NEW)
-- `templates/index_new.html` - Enhanced UI with camera controls
-- `step8_web_enhanced.py` - Enhanced backend with tracking
+- `templates/index_new.html` - Enhanced UI with camera controls and PTSD chat
+- `step8_web_enhanced.py` - Enhanced backend with tracking and PTSD endpoints
 - `report_generator.py` - PDF generation with graphs
 - `camera_utils.py` - Updated with confidence scores
 
@@ -72,43 +97,52 @@ Open browser: **http://127.0.0.1:5000**
 
 ## 🎯 TESTING CHECKLIST
 
+
 After training, test these features:
 
-1. **Camera UI**
+
+1. **Screening Type Selection**
+   - [ ] Start screen offers both Depression and PTSD
+   - [ ] Selecting PTSD disables camera controls
+   - [ ] PTSD questions shown as options
+
+2. **Camera UI (Depression only)**
    - [ ] Permission modal appears
    - [ ] "Enable Camera" button works
    - [ ] Status indicator turns green
    - [ ] Camera preview shows video
    - [ ] "Disable Camera" works
 
-2. **Facial Tracking**
+3. **Facial Tracking (Depression only)**
    - [ ] Features captured on submit
    - [ ] Real-time feedback appears (if toggled)
    - [ ] No errors in console
 
-3. **PDF Report**
+4. **PDF Report (Both modes)**
    - [ ] Download button appears
    - [ ] PDF opens successfully
    - [ ] Contains score visualization
-   - [ ] Contains behavioral statistics
-   - [ ] Contains expression graphs
+   - [ ] Contains behavioral statistics (depression)
+   - [ ] Contains expression graphs (depression)
    - [ ] Contains question-by-question analysis
+   - [ ] PTSD report includes severity and recommendations
 
-4. **Empathetic Responses**
+5. **Empathetic Responses**
    - [ ] Acknowledgement messages shown
-   - [ ] Vague answers detected and re-prompted
+   - [ ] Vague answers detected and re-prompted (depression)
 
 ---
 
 ## 📊 EXPECTED RESULTS
 
 ### Training Output
+
 ```
-Step 1: ✓ Prepared 4 sessions with PHQ-8 labels
-Step 2: ✓ Generated 768-dim text embeddings
-Step 5: ✓ Trained visual SVM (MAE: 3.2)
-Step 6: ✓ Trained fusion network (MAE: 3.5) ⭐
-Step 7: ✓ Generated 5 report templates
+Step 1: ✓ Data prepared manually or with your own script
+Step 2: ✓ Generated 768-dim text embeddings (feature_engineering_2.py)
+Step 3: ✓ Trained visual SVM (visual_classifier_5.py)
+Step 4: ✓ Trained ensemble model (train_depression_ensemble.py)
+Step 5: ✓ Generated 5 report templates (report_generator_7.py)
 ```
 
 ### PDF Report Includes
@@ -206,15 +240,16 @@ pip install reportlab matplotlib
 # Setup
 .\setup_enhanced.ps1
 
+
 # Train
-python step1_data_preparation.py
-python step2_feature_engineering.py
-python step5_model2b_visual_classifier.py
-python step6_model3_fusion.py
-python step7_model4_report_generator.py
+# python step1_data_preparation.py (missing/manual)
+python feature_engineering_2.py
+python visual_classifier_5.py
+python train_depression_ensemble.py
+python report_generator_7.py
 
 # Launch
-python step8_web_interface.py
+python step8_web_enhanced.py
 ```
 
 **Good luck with your project! 🎊**

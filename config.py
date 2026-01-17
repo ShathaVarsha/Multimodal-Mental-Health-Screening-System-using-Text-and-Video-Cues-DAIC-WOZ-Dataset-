@@ -33,8 +33,13 @@ TEST_SPLIT_FILE = PROJECT_ROOT / "test_split_Depression_AVEC2017.csv"
 # SESSION CONFIGURATION
 # =============================================================================
 
+
 # Available sessions (based on user's data folder)
-ALL_SESSIONS = ["300", "301", "302", "303", "304", "305"]
+ALL_SESSIONS = ["300", "301", "303", "304", "305", "310", "312", "313", "315", "316", "317"]
+
+# Explicit train/test split (2024)
+TRAIN_SESSIONS = ["303", "304", "305", "310", "312", "313", "315", "316", "317"]
+TEST_SESSIONS = ["300", "301"]
 
 # Sessions with PHQ-8 labels
 SESSIONS_WITH_LABELS = {
@@ -47,7 +52,8 @@ SESSIONS_WITH_LABELS = {
 }
 
 # Training sessions (those with PHQ-8 labels)
-TRAIN_SESSIONS = ["302", "303", "304", "305"]
+TRAIN_SESSIONS = ["303", "304", "305", "310", "312", "313", "315", "316", "317"]
+TEST_SESSIONS = ["300", "301"]
 
 # =============================================================================
 # DATA EXTRACTION SETTINGS

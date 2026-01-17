@@ -428,8 +428,9 @@ Read these for complete understanding:
 
 ### Training Sequence
 ```powershell
+
 # 1. Prepare data (2 min)
-python step1_data_preparation.py
+python step1_data_preparation.py  # Uses train sessions: 303, 304, 305, 310, 312, 313, 315, 316, 317; test: 300, 301
 
 # 2. Extract features (10-15 min) ☕
 python step2_feature_engineering.py

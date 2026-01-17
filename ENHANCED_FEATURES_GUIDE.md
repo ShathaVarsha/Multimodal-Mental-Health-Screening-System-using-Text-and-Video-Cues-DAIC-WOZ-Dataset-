@@ -229,13 +229,21 @@ camera_utils.py                  # Added confidence scores
 
 ---
 
-## 🎯 TRAINING NOTES
+
+## 🎯 TRAINING & TESTING DATA SPLIT
+
+### Current Data Split (as of 2024)
+
+- **Training sessions:** 303, 304, 305, 310, 312, 313, 315, 316, 317
+- **Test sessions:** 300, 301
+
+All model training, feature engineering, and evaluation scripts use this split. Make sure your data folders and CSVs reflect this.
 
 ### Camera Features During Training
 
-The model was trained on **DAIC-WOZ dataset** which contains:
-- Video recordings (not live camera)
-- Pre-extracted facial features from OpenFace (professional tool)
+The model was trained on the **DAIC-WOZ dataset** using the above split:
+- Training: Pre-extracted facial features from OpenFace (professional tool) for sessions 303, 304, 305, 310, 312, 313, 315, 316, 317
+- Testing: Sessions 300, 301
 
 **Your enhanced system:**
 - Extracts features from **live webcam frames**
@@ -311,15 +319,17 @@ Before presenting/submitting, verify:
 
 ## 🚀 READY TO TRAIN & TEST
 
-### Training Workflow (Same as Before)
+### Training & Testing Workflow (with new split)
 
 ```powershell
-# Train all models (if not done yet)
-python step1_data_preparation.py
-python step2_feature_engineering.py
-python step5_model2b_visual_classifier.py
-python step6_model3_fusion.py
-python step7_model4_report_generator.py
+# Prepare data (uses new train/test split)
+python data_preparation_1.py
+python feature_engineering_2.py
+
+# Train models (if not done yet)
+python visual_classifier_5.py
+python fusion_model_6.py
+python report_generator_7.py
 ```
 
 ### Launch Enhanced Interface

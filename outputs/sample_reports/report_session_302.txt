@@ -3,10 +3,10 @@ DEPRESSION ASSESSMENT REPORT
 ======================================================================
 
 Session ID: 302
-Date: 2025-12-29 00:16:31
+Date: 2026-01-14 23:48:54
 
 PHQ-8 Score: 4.0 (0-4)
-Predicted Score: 3.9
+Predicted Score: 4.0
 
 ──────────────────────────────────────────────────────────────────────
 SEVERITY: MINIMAL DEPRESSION

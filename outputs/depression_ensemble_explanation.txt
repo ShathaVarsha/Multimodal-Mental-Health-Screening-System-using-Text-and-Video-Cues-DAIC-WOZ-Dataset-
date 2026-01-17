@@ -1,0 +1,9 @@
+
+Why is this model better?
+- Stacking combines the strengths of MLP (deep non-linear feature learning, good for microexpressions) and XGBoost (robust to feature types, strong for tabular data).
+- The ensemble can capture both subtle facial patterns (MLP) and structured feature interactions (XGBoost).
+- This approach is state-of-the-art for tabular and video-derived features, outperforming SVMs and single models.
+- Metrics above allow cross-verification and clinical trust.
+How this helps depression diagnosis:
+- Microexpression features (AUs, pose, gaze) are directly learned by the MLP and XGBoost, improving emotion recognition during answers.
+- The model's output can be used in reports to explain how facial behavior contributed to the depression risk assessment.

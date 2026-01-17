@@ -76,14 +76,22 @@ Expected output: `✓ All core packages available`
 **Check that you have the required data files:**
 
 ```powershell
+
 # Check session data folders (should show .txt and .csv files)
-dir data\302
-dir data\303  
+dir data\303
 dir data\304
+dir data\305
+dir data\310
+dir data\312
+dir data\313
+dir data\315
+dir data\316
+dir data\317
+
 
 # Check label files (should exist in project root)
-dir dev_split_Depression_AVEC2017.csv
-dir train_split_Depression_AVEC2017.csv
+dir train_split_Depression_AVEC2017.csv  # (for sessions 303, 304, 305, 310, 312, 313, 315, 316, 317)
+dir test_split_Depression_AVEC2017.csv   # (for sessions 300, 301)
 ```
 
 **If any folders/files are missing:**
@@ -104,7 +112,7 @@ python step1_data_preparation.py
 
 **What to expect:**
 ```
-✓ Loaded 4 sessions with PHQ-8 labels
+✓ Loaded 9 sessions with PHQ-8 labels
 ✓ Synchronized 1,234 conversation turns
 ✓ Saved to outputs/prepared_data.pkl
 ```
@@ -201,16 +209,17 @@ dir outputs\report_templates.json   # Should show ~5 KB file
 
 ---
 
+
 ### STEP 6: Launch the Web Interface (30 seconds)
 
 ```powershell
-python step8_web_interface.py
+python step8_web_enhanced.py
 ```
 
 **What to expect:**
 ```
 ======================================================================
-              DEPRESSION SCREENING WEB INTERFACE
+      DEPRESSION & PTSD SCREENING WEB INTERFACE
 ======================================================================
 
 Starting server on http://127.0.0.1:5000
@@ -229,23 +238,25 @@ Press Ctrl+C to stop the server
 2. Type this address: **http://127.0.0.1:5000**
 3. Press Enter
 
-**You should see:** Beautiful chat interface with "Start Assessment" button
+**You should see:** A start screen with two options:
+  - **Depression (Video + Chat):** Adaptive questions, facial analysis (webcam required), and PDF report.
+  - **PTSD (Chat Only):** All PCL/PCL-5 questions, option-based chat (no webcam needed), and PTSD PDF report.
 
 ---
 
 ### STEP 8: Try Your First Screening! 🎉
 
-1. Click **"Start Assessment"**
-2. Read the first question
-3. Type your answer (try being specific!)
-4. Watch the empathetic responses
-5. Complete all 8 PHQ-8 questions
-6. View your detailed assessment report
+1. Click **"Begin Assessment"**
+2. Select your screening type (Depression or PTSD)
+3. For depression, grant camera permission if prompted
+4. For PTSD, proceed with chat only (no camera needed)
+5. Answer all questions and follow the empathetic conversation
+6. Download your detailed PDF report at the end
 
 **Tips for testing:**
-- Try vague answers like "idk" to see re-prompting
-- Enable webcam for facial analysis (optional)
-- Check the live score as you answer
+- Try vague answers like "idk" to see re-prompting (depression)
+- Enable webcam for facial analysis (depression)
+- For PTSD, select options for each question and review the PTSD report
 
 ---
 
@@ -255,9 +266,9 @@ You've successfully:
 - ✅ Installed all dependencies
 - ✅ Trained 5 AI models from scratch
 - ✅ Launched the web interface
-- ✅ Created a working mental health screening system
+- ✅ Created a working mental health screening system (Depression & PTSD)
 
-**Next time:** Models are already trained! Just run `python step8_web_interface.py`
+**Next time:** Models are already trained! Just run `python step8_web_enhanced.py`
 
 ---
 
@@ -271,7 +282,7 @@ INSTALLATION & SETUP
 [ ] Installed Python packages (pip install ...)
 [ ] Downloaded NLTK data
 [ ] Verified test_installation.py passes
-[ ] Verified data folders exist (302, 303, 304)
+[ ] Verified data folders exist (303, 304, 305, 310, 312, 313, 315, 316, 317, 300, 301)
 [ ] Verified label CSV files exist
 
 TRAINING (30-60 minutes total)

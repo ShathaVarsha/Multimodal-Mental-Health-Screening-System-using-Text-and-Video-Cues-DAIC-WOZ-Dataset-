@@ -1,0 +1,683 @@
+===== APCLC.pdf =====
+PCL-C
+INSTRUCTIONS: Below is a list of problems and complaints that people sometimes have in response to stressful
+life experiences. Please read each one carefully, then circle one of the numbers to the right to indicate how much
+you have been bothered by that problem in the past month.
+Not at all A little bit Moderately Quite a bit Extremely
+1. Repeated, disturbing memories, thoughts, or images of a
+stressful experience from the past? 1 2 3 4 5
+2. Repeated, disturbing dreams of a stressful experience from
+the past? 1 2 3 4 5
+3. Suddenly acting or feeling as if a stressful experience were
+happening again (as if you were reliving it)? 1 2 3 4 5
+4. Feeling very upset when something reminded you of a stressful
+experience from the past? 1 2 3 4 5
+5. Having physical reactions (e.g., heart pounding, trouble
+breathing, sweating) when something reminded you of a
+stressful experience from the past? 1 2 3 4 5
+6. Avoiding thinking about or talking about a stressful
+experience from the past or avoiding having feelings related
+to it? 1 2 3 4 5
+7. Avoiding activities or situations because they reminded you of
+a stressful experience from the past? 1 2 3 4 5
+8. Trouble remembering important parts of a stressful experience
+from the past? 1 2 3 4 5
+9. Loss of interest in activities that you used to enjoy? 1 2 3 4 5
+10. Feeling distant or cut off from other people? 1 2 3 4 5
+11. Feeling emotionally numb or being unable to have loving
+feelings for those close to you? 1 2 3 4 5
+12. Feeling as if your future will somehow be cut short? 1 2 3 4 5
+13. Trouble falling or staying asleep? 1 2 3 4 5
+14. Feeling irritable or having angry outbursts? 1 2 3 4 5
+15. Having difficulty concentrating? 1 2 3 4 5
+16. Being "super-alert" or watchful or on guard? 1 2 3 4 5
+17. Feeling jumpy or easily startled? 1 2 3 4 5
+PCL-C for DSM-IV (11/1/94) Weathers, Litz, Huska, & Keane National Center for PTSD - Behavioral Science Division
+
+
+===== APCLM.pdf =====
+PCL-M
+INSTRUCTIONS: Below is a list of problems and complaints that veterans sometimes have in response to
+stressful military experiences. Please read each one carefully, then circle one of the numbers to the right to
+indicate how much you have been bothered by that problem in the past month.
+Not at all A little bit Moderately Quite a bit Extremely
+1. Repeated, disturbing memories, thoughts, or images of a
+stressful military experience? 1 2 3 4 5
+2. Repeated, disturbing dreams of a stressful military
+experience? 1 2 3 4 5
+3. Suddenly acting or feeling as if a stressful military
+experience 1 2 3 4 5
+were happening again (as if you were reliving it)?
+4. Feeling very upset when something reminded you of a stressful
+military experience? 1 2 3 4 5
+5. Having physical reactions (e.g., heart pounding, trouble
+breathing, sweating) when something reminded you of a
+stressful military experience? 1 2 3 4 5
+6. Avoiding thinking about or talking about a stressful military
+experience or avoiding having feelings related to it? 1 2 3 4 5
+7. Avoiding activities or situations because they reminded you of
+a stressful military experience? 1 2 3 4 5
+8. Trouble remembering important parts of a stressful military
+experience? 1 2 3 4 5
+9. Loss of interest in activities that you used to enjoy? 1 2 3 4 5
+10. Feeling distant or cut off from other people? 1 2 3 4 5
+11. Feeling emotionally numb or being unable to have loving
+feelings for those close to you? 1 2 3 4 5
+12. Feeling as if your future will somehow be cut short? 1 2 3 4 5
+13. Trouble falling or staying asleep? 1 2 3 4 5
+14. Feeling irritable or having angry outbursts? 1 2 3 4 5
+15. Having difficulty concentrating? 1 2 3 4 5
+16. Being "super-alert" or watchful or on guard? 1 2 3 4 5
+17. Feeling jumpy or easily startled? 1 2 3 4 5
+PCL-M for DSM-IV (11/1/94) Weathers, Litz, Huska, & Keane National Center for PTSD - Behavioral Science Division
+
+
+===== APCLS.pdf =====
+PCL-S
+The event you experienced was on .
+(event) (date)
+INSTRUCTIONS: Below is a list of problems and complaints that people sometimes have in response to stressful
+life experiences. Please read each one carefully, then circle one of the numbers to the right to indicate how much
+you have been bothered by that problem in the past month.
+Not at all A little bit Moderately Quite a bit Extremely
+1. Repeated, disturbing memories, thoughts, or images of the
+stressful experience? 1 2 3 4 5
+2. Repeated, disturbing dreams of the stressful experience? 1 2 3 4 5
+3. Suddenly acting or feeling as if the stressful experience were
+happening again (as if you were reliving it)? 1 2 3 4 5
+4. Feeling very upset when something reminded you of the
+stressful experience? 1 2 3 4 5
+5. Having physical reactions (e.g., heart pounding, trouble
+breathing, sweating) when something reminded you of the
+stressful experience? 1 2 3 4 5
+6. Avoiding thinking about or talking about the stressful
+experience or avoiding having feelings related to it? 1 2 3 4 5
+7. Avoiding activities or situations because they reminded you of
+the stressful experience? 1 2 3 4 5
+Trouble remembering important parts of the stressful
+8. 1 2 3 4 5
+experience?
+9. Loss of interest in activities that you used to enjoy? 1 2 3 4 5
+10. Feeling distant or cut off from other people? 1 2 3 4 5
+11. Feeling emotionally numb or being unable to have loving
+feelings for those close to you? 1 2 3 4 5
+12. Feeling as if your future will somehow be cut short? 1 2 3 4 5
+13. Trouble falling or staying asleep? 1 2 3 4 5
+14. Feeling irritable or having angry outbursts? 1 2 3 4 5
+15. Having difficulty concentrating? 1 2 3 4 5
+16. Being "super-alert" or watchful or on guard? 1 2 3 4 5
+17. Feeling jumpy or easily startled? 1 2 3 4 5
+PCL-S for DSM-IV (11/1/94) Weathers, Litz, Huska, & Keane National Center for PTSD - Behavioral Science Division
+
+
+===== PCL_Psychometric_Information.pdf =====
+PTSD Checklist (PCL)
+This information was excerpted from Norris, F. H., & Hamblen, J. L. (2003). Standardized self­
+report measures of civilian trauma and PTSD. In J. Wilson & T. Keane (Eds.), Assessing
+Psychological Trauma and PTSD: A Practitioner's Handbook (2"d Ed.), New York: Guilford.
+The PTSD Checklist, Civilian Version (PCL-C) was developed by Frank Weathers and
+his colleagues at the National Center for PTSD (1993). The scale consists of 17 questions that
+now correspond to DSM-IV. Respondents are asked how often they have been bothered by each
+symptom is the past month on a 5-point severity scale. According to the authors, the questions
+may be worded generically to refer to "stressful experiences in the past" (PCL-C) or to describe
+reactions to a specific event (PCL-S). Initial psychometric data was derived by using a military
+version of the PCL (PCL-M) in a sample of Vietnam veterans, in which the prevalence of PTSD
+was high. Internal consistency coefficients were very high for the total scale (.97) and for each
+subscale (.92 - .93). Test-retest reliability over 2 - 3 days was .96. The PCL-M correlated highly
+with the Mississippi Scale for Combat Related PTSD (.93), the PK Scale of the MMPI (.77), and
+the Impact of Event Scale (.90). In this sample, the PCL-M was quite predictive of PTSD
+caseness as assessed with the SCID; a cutoff score of 50 had a sensitivity of .82, a specificity of
+.83, and a kappa of .64. (The reader should note that cutoff scores may vary depending upon the
+prevalence of disorder in a sample.)
+Other researchers have also presented evidence supporting the reliability and validity of
+the PCL-C or PCL-S. In a sample of 40 motor vehicle accident and sexual assault victims (of
+whom 18 had PTSD on the Clinician Administered PTSD Scale (CAPS), Blanchard, Alexander,
+Buckley, and Forneris (1996) found an alpha of .94 and an overall correlation between total
+PCL-S and CAPS scores of .93. They found that a score of 44 (rather than 50) maximized
+diagnostic efficiency (sensitivity of .94, specificity of .86, overall efficiency of .90). In a sample
+of individuals in France who had experienced a variety of events, Ventureya, Yao, Cottraux,
+Note, and Guillard (2002) reported excellent internal consistency (.86) and test-retest reliability
+(.80) for the total PCL-S score. Using the cutpoint of 44 recommended by Blanchard et al.
+(1996), the PCL-S showed a sensitivity of .97, a specificity of .87, and an overall diagnostic
+efficacy of .94.
+The PCL appears to have much to recommend it. Because it was developed by the
+National Center for PTSD, it is in the public domain. It is reliable, and the M and S versions map
+directly onto DSM criteria. The M and S versions have been shown to correlate highly with
+clinician-administered measures. Less information is available about version C, the civilian
+version that does not identify a specific event, and the reader should be cautious about
+generalizing psychometric findings from one version of the scale to another. Also, the published
+cutpoints should be used with caution as they were derived from samples with high prevalence
+rates of current PTSD and may not be appropriate for samples with lower rates.
+
+
+===== PCL_Scoring_Information.pdf =====
+PCL Scoring
+There are several ways in which to score the PTSD Checklist (PCL). Perhaps the
+easiest way to score the PCL is to add up all the items for a total severity score. A total
+score of 44 is considered to be PTSD positive for the general population while a total
+score of 50 is considered to be PTSD positive in military populations. A second way to
+score the PCL is to treat “moderately” or above (responses 3 through 5) as symptomatic
+and anything below “moderately” (1 and 2) as non-symptomatic. Then use the DSM
+scoring rules to make a diagnosis. That is:
+(cid:131) You need an endorsement of at least 1 B item (question #s 1-5)
+(cid:131) You need an endorsement of at least 3 C items (question #s 6-12)
+(cid:131) You need an endorsement of at least 2 D items (question #s 13-17)
+However, please note that it is then possible to get a PTSD diagnosis with a total score of
+29, which would be very low. It may therefore be best to use a combination of the two
+approaches. That is, the requisite number of items within each cluster are met at a 3 or
+above AND the total score is above the specified cut point.
+
+
+===== PCL5_criterionA_form.PDF =====
+PTSD Checklist for
+DSM-5 (PCL-5) with Criterion A
+Version date: 29 August 2023
+Reference: Weathers, F. W., Litz, B. T., Keane, T. M.,
+Palmieri, P. A., Marx, B. P., & Schnurr, P. P. (2013).
+The PTSD Checklist for DSM-5 (PCL-5) – Extended
+Criterion A [Measurement instrument]. Available
+from https://www.ptsd.va.gov/
+URL: https://www.ptsd.va.gov/professional/
+assessment/adult-sr/ptsd-checklist.asp
+Note: This is a fillable form. You may complete it electronically.
+This page intentionally left blank
+PCL-5 with Criterion A
+Instructions: This questionnaire asks about problems you may have had after a very stressful experience involving
+actual or threatened death, serious injury, or sexual violence. It could be something that happened to you directly,
+something you witnessed, or something you learned happened to a close family member or close friend. Some
+examples are a serious accident; fire; disaster such as a hurricane, tornado, or earthquake; physical or sexual attack or
+abuse; war; homicide; or suicide.
+First, please answer a few questions about your worst event, which for this questionnaire means the event that
+currently bothers you the most. This could be one of the examples above or some other very stressful experience. Also,
+it could be a single event (for example, a car crash) or multiple similar events (for example, multiple stressful events in
+a war-zone or repeated sexual abuse).
+Briefly identify the worst event (if you feel comfortable doing so):
+How long ago did it happen? ____________________________________(please estimate if you are not sure)
+Did it involve actual or threatened death, serious injury, or sexual violence?
+_____ Yes
+_____ No
+How did you experience it?
+_____ It happened to me directly
+_____ I witnessed it
+_____ I learned about it happening to a close family member or close friend
+_____ I was repeatedly exposed to details about it as part of my job (for example, paramedic, police, military, or other
+first responder)
+_____ Other, please describe
+If the event involved the death of a close family member or close friend, was it due to some kind of accident or
+violence, or was it due to natural causes?
+_____ Accident or violence
+_____ Natural causes
+_____ Not applicable (the event did not involve the death of a close family member or close friend)
+PCL-5 with Criterion A (29 August 2023) National Center for PTSD Page 1 of 2
+Second, below is a list of problems that people sometimes have in response to a very stressful experience. Keeping
+your worst event in mind, please read each problem carefully and then select one of the numbers to the right to
+indicate how much you have been bothered by that problem in the past month.
+Your worst event: _______________________________________________________________________________
+In the past month, how much were you bothered by: Not at all A little bit Moderately Quite a bit Extremely
+1. Repeated, disturbing, and unwanted memories of the
+0 1 2 3 4
+stressful experience?
+2. Repeated, disturbing dreams of the stressful experience? 0 1 2 3 4
+3. Suddenly feeling or acting as if the stressful experience
+were actually happening again (as if you were actually 0 1 2 3 4
+back there reliving it)?
+4. Feeling very upset when something reminded you of the
+0 1 2 3 4
+stressful experience?
+5. Having strong physical reactions when something
+reminded you of the stressful experience (for example, 0 1 2 3 4
+heart pounding, trouble breathing, sweating)?
+6. Avoiding memories, thoughts, or feelings related to the
+0 1 2 3 4
+stressful experience?
+7. Avoiding external reminders of the stressful experience
+(for example, people, places, conversations, activities, 0 1 2 3 4
+objects, or situations)?
+8. Trouble remembering important parts of the stressful
+0 1 2 3 4
+experience?
+9. Having strong negative beliefs about yourself, other
+people, or the world (for example, having thoughts such as:
+0 1 2 3 4
+I am bad, there is something seriously wrong with me, no
+one can be trusted, the world is completely dangerous)?
+10. Blaming yourself or someone else for the stressful
+0 1 2 3 4
+experience or what happened after it?
+11. Having strong negative feelings such as fear, horror, anger,
+0 1 2 3 4
+guilt, or shame?
+12. Loss of interest in activities that you used to enjoy? 0 1 2 3 4
+13. Feeling distant or cut off from other people? 0 1 2 3 4
+14. Trouble experiencing positive feelings (for example,
+being unable to feel happiness or have loving feelings for 0 1 2 3 4
+people close to you)?
+15. Irritable behavior, angry outbursts, or acting aggressively? 0 1 2 3 4
+16. Taking too many risks or doing things that could cause
+0 1 2 3 4
+you harm?
+17. Being “superalert” or watchful or on guard? 0 1 2 3 4
+18. Feeling jumpy or easily startled? 0 1 2 3 4
+19. Having difficulty concentrating? 0 1 2 3 4
+20. Trouble falling or staying asleep? 0 1 2 3 4
+PCL-5 with Criterion A (29 August 2023) National Center for PTSD Page 3 of 3
+
+
+===== PCL5_LEC_criterionA.PDF =====
+PTSD Checklist for DSM-5 (PCL-5)
+with Life Events Checklist for
+DSM-5 (LEC-5) and Criterion A
+Version date: 29 August 2023
+Reference: Weathers, F. W., Litz, B. T., Keane, T. M.,
+Palmieri, P. A., Marx, B. P., & Schnurr, P. P. (2013).
+The PTSD Checklist for DSM-5 (PCL-5) – LEC-5 and
+Extended Criterion A [Measurement instrument].
+Available from https://www.ptsd.va.gov/
+URL: https://www.ptsd.va.gov/professional/
+assessment/adult-sr/ptsd-checklist.asp
+Note: This is a fillable form. You may complete it electronically.
+This page intentionally left blank
+PCL-5 with LEC-5 and Criterion A
+Part 1
+Instructions: Listed below are a number of difficult or stressful things that sometimes happen to people. For each
+event check one or more of the boxes to the right to indicate that: (a) it happened to you personally; (b) you witnessed
+it happen to someone else; (c) you learned about it happening to a close family member or close friend; (d) you were
+exposed to it as part of your job (for example, paramedic, police, military, or other first responder); (e) you’re not sure if
+it fits; or (f) it doesn’t apply to you.
+Be sure to consider your entire life (growing up as well as adulthood) as you go through the list of events.
+Happened Witnessed Learned Part of my Not Doesn’t
+Event
+to me it about it job sure apply
+1. Natural disaster (for example, flood, hurricane,
+tornado, earthquake)
+2. Fire or explosion
+3. Transportation accident (for example, car accident,
+boat accident, train wreck, plane crash)
+4. Serious accident at work, home, or during recreational
+activity
+5. Exposure to toxic substance (for example, dangerous
+chemicals, radiation)
+6. Physical assault (for example, being attacked, hit,
+slapped, kicked, beaten up)
+7. Assault with a weapon (for example, being shot,
+stabbed, threatened with a knife, gun, bomb)
+8. Sexual assault (rape, attempted rape, made to
+perform any type of sexual act through force or
+threat of harm)
+9. Other unwanted or uncomfortable sexual experience
+10. Combat or exposure to a war-zone (in the military or
+as a civilian)
+11. Captivity (for example, being kidnapped, abducted,
+held hostage, prisoner of war)
+12. Life-threatening illness or injury
+13. Severe human suffering
+14. Sudden violent death (for example, homicide,
+suicide)
+15. Sudden accidental death
+16. Serious injury, harm, or death you caused to
+someone else
+17. Any other very stressful event or experience
+PCL-5 with LEC-5 and Criterion A (29 August 2023) National Center for PTSD Page 1 of 3
+Part 2
+A.If you checked anything for #17 in PART 1, briefly identify the event you were thinking of:
+B.If you have experienced more than one of the events in PART 1, think about the event you consider the worst event,
+which for this questionnaire means the event that currently bothers you the most. If you have experienced only one
+of the events in PART 1, use that one as the worst event. Please answer the following questions about the worst event
+(check all options that apply):
+Briefly identify the worst event (if you feel comfortable doing so):
+How long ago did it happen? ____________________________________(please estimate if you are not sure)
+How did you experience it?
+It happened to me directly
+I witnessed it
+I learned about it happening to a close family member or close friend
+I was repeatedly exposed to details about it as part of my job (for example, paramedic, police, military, or other
+first responder)
+Other, please describe
+Was someone’s life in danger?
+Yes, my life
+Yes, someone else’s life
+No
+Was someone seriously injured or killed?
+Yes, I was seriously injured
+Yes, someone else was seriously injured or killed
+No
+Did it involve sexual violence? ______Yes _____ No
+If the event involved the death of a close family member or close friend, was it due to some kind of accident or
+violence, or was it due to natural causes?
+Accident or violence
+Natural causes
+Not applicable (the event did not involve the death of a close family member or close friend)
+How many times altogether have you experienced a similar event as stressful or nearly as stressful as the
+worst event?
+Just once
+More than once (please specify or estimate the total number of times you have had this experience )
+PCL-5 with LEC-5 and Criterion A (29 August 2023) National Center for PTSD Page 2 of 3
+Part 3
+Instructions: Below is a list of problems that people sometimes have in response to a very stressful experience.
+Keeping your worst event in mind, please read each problem carefully and then select one of the numbers to the right
+to indicate how much you have been bothered by that problem in the past month.
+Your worst event: _______________________________________________________________________________
+In the past month, how much were you bothered by: Not at all A little bit Moderately Quite a bit Extremely
+1. Repeated, disturbing, and unwanted memories of the
+0 1 2 3 4
+stressful experience?
+2. Repeated, disturbing dreams of the stressful experience? 0 1 2 3 4
+3. Suddenly feeling or acting as if the stressful experience
+were actually happening again (as if you were actually 0 1 2 3 4
+back there reliving it)?
+4. Feeling very upset when something reminded you of the
+0 1 2 3 4
+stressful experience?
+5. Having strong physical reactions when something
+reminded you of the stressful experience (for example, 0 1 2 3 4
+heart pounding, trouble breathing, sweating)?
+6. Avoiding memories, thoughts, or feelings related to the
+0 1 2 3 4
+stressful experience?
+7. Avoiding external reminders of the stressful experience
+(for example, people, places, conversations, activities, 0 1 2 3 4
+objects, or situations)?
+8. Trouble remembering important parts of the stressful
+0 1 2 3 4
+experience?
+9. Having strong negative beliefs about yourself, other
+people, or the world (for example, having thoughts such as:
+0 1 2 3 4
+I am bad, there is something seriously wrong with me, no
+one can be trusted, the world is completely dangerous)?
+10. Blaming yourself or someone else for the stressful
+0 1 2 3 4
+experience or what happened after it?
+11. Having strong negative feelings such as fear, horror, anger,
+0 1 2 3 4
+guilt, or shame?
+12. Loss of interest in activities that you used to enjoy? 0 1 2 3 4
+13. Feeling distant or cut off from other people? 0 1 2 3 4
+14. Trouble experiencing positive feelings (for example,
+being unable to feel happiness or have loving feelings for 0 1 2 3 4
+people close to you)?
+15. Irritable behavior, angry outbursts, or acting aggressively? 0 1 2 3 4
+16. Taking too many risks or doing things that could cause
+0 1 2 3 4
+you harm?
+17. Being “superalert” or watchful or on guard? 0 1 2 3 4
+18. Feeling jumpy or easily startled? 0 1 2 3 4
+19. Having difficulty concentrating? 0 1 2 3 4
+20. Trouble falling or staying asleep? 0 1 2 3 4
+PCL-5 with LEC-5 and Criterion A (29 August 2023) National Center for PTSD Page 3 of 3
+
+
+===== PCL5_Standard_form.pdf =====
+PTSD Checklist for
+DSM-5 (PCL-5)
+Version date: 29 August 2023
+Reference: Weathers, F. W., Litz, B. T., Keane, T. M.,
+Palmieri, P. A., Marx, B. P., & Schnurr, P. P. (2013).
+The PTSD Checklist for DSM-5 (PCL-5) – Standard
+[Measurement instrument]. Available from
+https://www.ptsd.va.gov/
+URL: https://www.ptsd.va.gov/professional/
+assessment/adult-sr/ptsd-checklist.asp
+Note: This is a fillable form. You may complete it electronically.
+This page intentionally left blank
+PCL-5
+Instructions: Below is a list of problems that people sometimes have in response to a very stressful experience.
+Keeping your worst event in mind, please read each problem carefully and then select one of the numbers to the right
+to indicate how much you have been bothered by that problem in the past month.
+Your worst event: _______________________________________________________________________________
+In the past month, how much were you bothered by: Not at all A little bit Moderately Quite a bit Extremely
+1. Repeated, disturbing, and unwanted memories of the
+0 1 2 3 4
+stressful experience?
+2. Repeated, disturbing dreams of the stressful experience? 0 1 2 3 4
+3. Suddenly feeling or acting as if the stressful experience
+were actually happening again (as if you were actually 0 1 2 3 4
+back there reliving it)?
+4. Feeling very upset when something reminded you of the
+0 1 2 3 4
+stressful experience?
+5. Having strong physical reactions when something
+reminded you of the stressful experience (for example, 0 1 2 3 4
+heart pounding, trouble breathing, sweating)?
+6. Avoiding memories, thoughts, or feelings related to the
+0 1 2 3 4
+stressful experience?
+7. Avoiding external reminders of the stressful experience
+(for example, people, places, conversations, activities, 0 1 2 3 4
+objects, or situations)?
+8. Trouble remembering important parts of the stressful
+0 1 2 3 4
+experience?
+9. Having strong negative beliefs about yourself, other
+people, or the world (for example, having thoughts such as:
+0 1 2 3 4
+I am bad, there is something seriously wrong with me, no
+one can be trusted, the world is completely dangerous)?
+10. Blaming yourself or someone else for the stressful
+0 1 2 3 4
+experience or what happened after it?
+11. Having strong negative feelings such as fear, horror, anger,
+0 1 2 3 4
+guilt, or shame?
+12. Loss of interest in activities that you used to enjoy? 0 1 2 3 4
+13. Feeling distant or cut off from other people? 0 1 2 3 4
+14. Trouble experiencing positive feelings (for example,
+being unable to feel happiness or have loving feelings for 0 1 2 3 4
+people close to you)?
+15. Irritable behavior, angry outbursts, or acting aggressively? 0 1 2 3 4
+16. Taking too many risks or doing things that could cause
+0 1 2 3 4
+you harm?
+17. Being “superalert” or watchful or on guard? 0 1 2 3 4
+18. Feeling jumpy or easily startled? 0 1 2 3 4
+19. Having difficulty concentrating? 0 1 2 3 4
+20. Trouble falling or staying asleep? 0 1 2 3 4
+PCL-5 (18 August 2023) National Center for PTSD Page 3 of 3
+
+
+===== PCL5_Standard_form_week.PDF =====
+PTSD Checklist for
+DSM-5 (PCL-5)
+(Past Week Version)
+Version date: 13 February 2024
+Reference: Weathers, F. W., Litz, B. T., Keane, T. M.,
+Palmieri, P. A., Marx, B. P., & Schnurr, P. P. (2013).
+The PTSD Checklist for DSM-5 (PCL-5) – Standard
+[Measurement instrument]. Available from
+https://www.ptsd.va.gov/
+URL: https://www.ptsd.va.gov/professional/
+assessment/adult-sr/ptsd-checklist.asp
+Note: This is a fillable form. You may complete it electronically.
+This page intentionally left blank
+PCL-5
+Instructions: Below is a list of problems that people sometimes have in response to a very stressful experience.
+Keeping your worst event in mind, please read each problem carefully and then select one of the numbers to the right
+to indicate how much you have been bothered by that problem in the past week.
+Your worst event: _______________________________________________________________________________
+In the past week, how much were you bothered by: Not at all A little bit Moderately Quite a bit Extremely
+1. Repeated, disturbing, and unwanted memories of the
+0 1 2 3 4
+stressful experience?
+2. Repeated, disturbing dreams of the stressful experience? 0 1 2 3 4
+3. Suddenly feeling or acting as if the stressful experience
+were actually happening again (as if you were actually 0 1 2 3 4
+back there reliving it)?
+4. Feeling very upset when something reminded you of the
+0 1 2 3 4
+stressful experience?
+5. Having strong physical reactions when something
+reminded you of the stressful experience (for example, 0 1 2 3 4
+heart pounding, trouble breathing, sweating)?
+6. Avoiding memories, thoughts, or feelings related to the
+0 1 2 3 4
+stressful experience?
+7. Avoiding external reminders of the stressful experience
+(for example, people, places, conversations, activities, 0 1 2 3 4
+objects, or situations)?
+8. Trouble remembering important parts of the stressful
+0 1 2 3 4
+experience?
+9. Having strong negative beliefs about yourself, other
+people, or the world (for example, having thoughts such as:
+0 1 2 3 4
+I am bad, there is something seriously wrong with me, no
+one can be trusted, the world is completely dangerous)?
+10. Blaming yourself or someone else for the stressful
+0 1 2 3 4
+experience or what happened after it?
+11. Having strong negative feelings such as fear, horror, anger,
+0 1 2 3 4
+guilt, or shame?
+12. Loss of interest in activities that you used to enjoy? 0 1 2 3 4
+13. Feeling distant or cut off from other people? 0 1 2 3 4
+14. Trouble experiencing positive feelings (for example,
+being unable to feel happiness or have loving feelings for 0 1 2 3 4
+people close to you)?
+15. Irritable behavior, angry outbursts, or acting aggressively? 0 1 2 3 4
+16. Taking too many risks or doing things that could cause
+0 1 2 3 4
+you harm?
+17. Being “superalert” or watchful or on guard? 0 1 2 3 4
+18. Feeling jumpy or easily startled? 0 1 2 3 4
+19. Having difficulty concentrating? 0 1 2 3 4
+20. Trouble falling or staying asleep? 0 1 2 3 4
+PCL-5 (13 February 2024) National Center for PTSD Page 3 of 3
+
+
+===== using-PCL5.pdf =====
+Using the PTSD Checklist for
+DSM-5 (PCL-5)
+www.ptsd.va.gov
+Using the PTSD Checklist for DSM-5
+NOTE: What is the PCL-5?
+The PCL for DSM-IV was
+The PTSD Checklist for DSM-5 is a 20-item self-report measure that assesses
+revised in accordance with DSM- 5
+the presence and severity of PTSD symptoms. Items on the PCL-5 correspond
+(PCL-5). Several important
+with DSM-5 criteria for PTSD. The PCL-5 has a variety of purposes, including:
+revisions were made to the PCL-
+• Quantifying and monitoring symptoms over time
+5, including changes to existing
+symptoms and the addition of • Screening individuals for PTSD
+three new symptoms of PTSD.
+• Assisting in making a provisional diagnosis of PTSD
+The self-report rating scale for
+PCL-5 was also changed to 0-4.
+The PCL-5 should not be used as a stand-alone diagnostic tool. When
+Therefore, the change in the
+considering a diagnosis, the clinician will still need to use clinical interviewing
+rating scale combined with the
+skills, and a recommended structured interview (e.g., Clinician-Administered
+increase from 17 to 20 items
+PTSD Scale for DSM-5, CAPS-5) to determine a diagnosis.
+means that PCL-5 scores are
+not compatible with PCL for
+Three formats of the PCL-5 measure are available:
+DSM-IV scores and cannot be
+• PCL-5 without Criterion A component
+used interchangeably.
+• PCL-5 with extended Criterion A assessment
+Initial research suggests that
+• PCL-5 with LEC-5 and extended Criterion A assessment
+a PCL-5 cutoff score between
+31-33 is indicative of probable
+How is the PCL-5 administered?
+PTSD across samples. However,
+because the population and th e
+purpose of the screening may The PCL-5 is a self-report measure that can be completed by respon dents
+warrant different cutoff scores, themselves or read to them either in person or over the telephone. It takes
+users are encouraged to co nsider approximately 5-10 minutes to complete.
+both of these factors when
+The preferred administration is for the patient to self-administer the PC L-5.
+choosing a cutoff score.
+Patients can complete the measure: in the waiting area prior to a se ssion,
+at the beginning of a session, at the close of a session, or at home pr ior to
+an appointment.
+The PCL-5 is intended to assess patient symptoms in the past month.
+Versions of the PCL-5 that assess symptoms over a different timeframe (e.g.,
+past day, past week, past 3 months) have not been validated. For various
+reasons it often makes sense to administer the PCL-5 more or less frequently
+than once a month, and in those cases the timeframe in the directions may be
+changed to meet the purpose of the assessment, though providers should be
+aware that such changes may alter the psychometric properties of the measure.
+http://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp Page 1 of 4
+How is the PCL-5 scored and interpreted?
+Respondents are asked to rate how bothered they have been by each of 20 items in the past month on a 5- point
+Likert scale ranging from 0-4. Items are summed to provide a total severity score (range = 0-80).
+0 = Not at all 1 = A little bit 2 = Moderately 3 = Quite a bit 4 = Extremely
+The PCL-5 can determine a provisional diagnosis in two ways:
+• Summing all 20 items (range 0-80) and using a cut-point score of 31-33 appears to be reasonable based
+upon current psychometric work. However, when choosing a cutoff score, it is essential to consider the goals
+of the assessment and the population being assessed. The lower the cutoff score, the more lenient the
+criteria for inclusion, increasing the possible number of false-positives. The higher the cutoff score, the more
+stringent the inclusion criteria and the more potential for false-negatives.
+• Treating each item rated as 2 = “Moderately” or higher as a symptom endorsed, then following the DSM-5
+diagnostic rule which requires at least: 1 Criterion B item (questions 1-5), 1 Criterion C item (questions 6-7),
+2 Criterion D items (questions 8-14), 2 Criterion E items (questions 15-20). In general, use of a cutoff score
+tends to produce more reliable results than the DSM-5 diagnostic rule.
+If a patient meets a provisional diagnosis using either of the methods above, they need further assessment (e.g.,
+CAPS-5) to confirm a diagnosis of PTSD.
+There are currently no empirically derived severity ranges for the PCL-5.
+How might the PCL-5 help my patients?
+Treatment Planning
+When given at an intake or assessment session, the PCL-5 may be used to help determine the appropriate next steps
+or treatment options. For example:
+• A total score of 31-33 or higher suggests the patient may benefit from PTSD treatment. The patient can
+either be referred to a PTSD specialty clinic or be offered an evidence-based treatment for PTSD such as
+Prolonged Exposure (PE), Cognitive Processing Therapy (CPT), or Eye Movement Desensitization and
+Reprocessing (EMDR).
+• Scores lower than 31-33 may indicate the patient either has subthreshold symptoms of PTSD or does not
+meet criteria for PTSD, and this information should be incorporated into treatment planning.
+Keeping the goal of the assessment in mind, it may make sense to lower the cut-point score to maximize the
+detection of possible cases needing additional services or treatment. A higher cut-point score should be considered
+when attempting to minimize false positives.
+http://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp Page 2 of 4
+Measuring Change
+Good clinical care requires that clinicians monitor patient progress. There is limited evidence to guide decisions
+about response and clinically meaningful improvement. Examining data from the PCL (for DSM-IV) and PCL-5, 10
+points is suggested as an indicator of response. One study found that a PCL-5 < 28 can be used as an indicator of
+clinically significant change (Ma rx et al. 2022), where the respondent is likely to belong to a healthy population.
+Addressing Lack of Improvement
+If repeated administrations of the PCL-5 suggest little movement or worsening in your patient’s overall score during
+treatment, you can:
+• Refer back to the protocol and/or recommended supplemental treatment materials
+• Work to identify possible therapy-interfering behaviors while also reviewing application and response to
+interventions
+• Explore and process the lack of improvement with the patient
+• If seeing the patient less frequently than once a week, consider seeing them weekly to increase the dose of
+treatment while using the PCL-5 to track symptom change
+• If an adequate dose of the current treatment has been given (e.g. typically 10-15 sessions), and scores
+remain high or are getting higher, consider switching to another evidence-based treatment for PTSD
+• Seek consultation with an experienced provider or contact the PTSD Consultation Program (866- 948-7880
+or PTSDconsult@va.gov) if you are treating Veterans.
+Is the PCL-5 psychometrically sound?
+The PCL-5 is a psychometrically sound measure of DSM-5 PTSD. (See Studies that Informed Our Recommendatio ns
+below for references.) It is valid and reliable, useful in quantifying PTSD symptom severity, and sensitive to change
+over time in military Servicemembers and undergraduate students.
+Questions?
+If you have any questions about the use of the PCL-5 or PTSD assessment more broadly, we recommend seeking
+consultation with a supervisor or experienced provider, or contacting the PTSD Consultation Program (866-948-7880
+or PTSDconsult@va.gov) if you are treating Veterans.
+http://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp Page 3 of 4
+Studies that Informed Our Recommendations
+Blevins, C. A., Weathers, F. W., Davis, M. T., Witte, T. K., & Domino, J. L. (2015). The Posttraumatic Stress Disorder
+Checklist for DSM-5 (PCL-5): Development and initial psychometric evaluation. Journal of Traumatic Stress, 28, 489–498.
+doi:10.1002/jts.22059
+Bovin, M. J., Marx, B. P., Weathers, F. W., Gallagher, M. W., Rodriguez, P., Schnurr, P. P., & Keane, T. M. 2(016).
+Psychometric properties of the PTSD Checklist for Diagnostic and Statistical Manual of Mental Disorders-Fifth Edition
+(PCL-5) in Veterans. Psychological Assessment, 28, 1379-1391. doi:10.1037/pas0000254
+Marx, B. P., Lee, D. J., Norman, S. B., Bovin, M. J., Sloan, D. M., Weathers, F. W., Keane, T. M., & Schnurr, P. P. (2022).
+Reliable and clinically significant change in the Clinician-Administered PTSD Scale for DSM-5 and PTSD Checklist for
+DSM-5 among male Veterans. Psychological Assessment, 34(2), 197-203. https://doi.org/10.037/pas0001098
+National Center for PTSD. (2016). PTSD Checklist for DSM-5 (PCL-5). Retrieved from www.ptsd.va.gov/professional/
+assessment/adult-sr/ptsd-checklist.asp
+Weathers, F. W., Litz, B. T., Keane, T. M., Palmieri, P. A., Marx, B. P., & Schnur,r P. P. (2013). The PTSD Checklist for
+DSM-5 (PCL-5) – Standard [Measurement instrument]. Available from www.ptsd.va.gov
+Wortmann, J. H., Jordan, A. H., Weathers, F. W., Resick, P. A., Dondanville, K. A., Hall-Clark, B., Foa, E. B., Young-
+McCaughan, S., Yarvis, J. S., Hembree, E. A., Mintz, J., Peterson, A., & Litz, B. T. (2016). Psychometric analysis of the
+PTSD Checklist-5 (PCL-5) among treatment-seeking military service members. Psychological Assessment, 28,
+1392-1403. doi:10.1037/pas0000260
+http://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp Page 4 of 4
+
+

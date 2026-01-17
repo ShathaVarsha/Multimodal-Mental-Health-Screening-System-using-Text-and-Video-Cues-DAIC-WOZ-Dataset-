@@ -1,9 +1,9 @@
 {
-  "total_reports": 4,
+  "total_reports": 3,
   "severity_distribution": {
-    "Minimal Depression": 2,
+    "Minimal Depression": 1,
     "Mild Depression": 2
   },
-  "average_phq8": 4.25,
-  "average_predicted": 4.150753621011972
+  "average_phq8": 4.333333333333333,
+  "average_predicted": 4.90819509824117
 }
