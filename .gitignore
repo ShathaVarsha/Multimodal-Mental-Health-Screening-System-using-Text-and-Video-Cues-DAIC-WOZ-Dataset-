@@ -1,0 +1,115 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+.venv-1/
+venv/
+ENV/
+env/
+rv_project/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Data (keep structure, ignore data files)
+data/**/*.pkl
+data/**/*.npy
+data/**/*.h5
+data/**/*.pt
+data/**/*.pth
+
+# Models and features
+ml_training/saved_models/*.pkl
+ml_training/saved_features/**/.gitkeep
+ml_training/micro_expression_models/*.pkl
+ml_training/*.pkl
+ml_training/*.pth
+
+# Logs
+ml_training/training_logs/*.json
+ml_training/training_logs/*.log
+*.log
+
+# Outputs
+outputs/**/*.png
+outputs/**/*.jpg
+outputs/**/*.json
+outputs/**/*.csv
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+.coverage
+htmlcov/
+
+# pytest
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Compiled files
+*.o
+*.a
+*.so
+
+# Large files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Markdown files (keep only root README)
+*.md
+!README.md
+
+# Keep directory structure
+!**/.gitkeep
