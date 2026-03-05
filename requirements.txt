@@ -1,0 +1,50 @@
+"""
+Requirements for the project
+Install with: pip install -r requirements.txt
+"""
+
+# Backend dependencies
+flask==2.3.0
+flask-cors==4.0.0
+python-dotenv==1.0.0
+
+# Data processing
+numpy==1.24.0
+pandas==2.0.0
+scipy==1.10.0
+
+# Machine Learning
+scikit-learn==1.2.0
+tensorflow==2.12.0
+torch==2.0.0
+torchvision==0.15.0
+
+# Model serialization
+pickle5==0.0.12
+
+# Text processing
+nltk==3.8
+textblob==0.17.0
+
+# Visualization
+matplotlib==3.7.0
+seaborn==0.12.0
+plotly==5.14.0
+
+# Utilities
+tqdm==4.65.0
+requests==2.31.0
+opencv-python==4.7.0
+
+# Testing
+pytest==7.3.0
+pytest-cov==4.1.0
+
+# Code quality
+black==23.3.0
+flake8==6.0.0
+mypy==1.0.0
+
+# Jupyter
+jupyter==1.0.0
+ipykernel==6.22.0

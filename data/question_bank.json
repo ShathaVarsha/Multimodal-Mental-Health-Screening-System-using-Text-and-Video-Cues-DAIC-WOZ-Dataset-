@@ -1,0 +1,496 @@
+{
+  "phq9": [
+    {
+      "index": 0,
+      "formal": "Little interest or pleasure in doing things",
+      "conversational": "I noticed you haven't mentioned things you enjoy doing lately. What used to make you happy, and are you still interested in it?"
+    },
+    {
+      "index": 1,
+      "formal": "Feeling down, depressed, or hopeless",
+      "conversational": "How would you describe your mood over the last two weeks?"
+    },
+    {
+      "index": 2,
+      "formal": "Trouble falling or staying asleep, or sleeping too much",
+      "conversational": "How has your sleep been recently? Any trouble falling asleep, staying asleep, or sleeping too much?"
+    },
+    {
+      "index": 3,
+      "formal": "Feeling tired or having little energy",
+      "conversational": "How has your energy been lately?"
+    },
+    {
+      "index": 4,
+      "formal": "Poor appetite or overeating",
+      "conversational": "Have you noticed any changes in appetite, like eating less or more than usual?"
+    },
+    {
+      "index": 5,
+      "formal": "Feeling bad about yourself or that you are a failure",
+      "conversational": "How have you been feeling about yourself recently?"
+    },
+    {
+      "index": 6,
+      "formal": "Trouble concentrating on things",
+      "conversational": "Has focusing or concentrating been difficult for you lately?"
+    },
+    {
+      "index": 7,
+      "formal": "Moving or speaking slowly, or being restless",
+      "conversational": "Have you felt physically slowed down, or more restless than usual?"
+    },
+    {
+      "index": 8,
+      "formal": "Thoughts that you would be better off dead",
+      "conversational": "I need to ask directly: have you had thoughts that life is not worth living, or thoughts of harming yourself?"
+    }
+  ],
+  "phq9_scenario_followups": {
+    "postpartum": [
+      {
+        "phq9_index": 0,
+        "followup": "Is this related to bonding with your baby or enjoying time with parenting activities?"
+      },
+      {
+        "phq9_index": 1,
+        "followup": "Are you feeling overwhelmed by the demands of new parenthood?"
+      },
+      {
+        "phq9_index": 2,
+        "followup": "Is your sleep disruption mainly from the baby's schedule or from difficulty sleeping even when the baby sleeps?"
+      },
+      {
+        "phq9_index": 3,
+        "followup": "Are you struggling to keep up with baby care and household responsibilities due to low energy?"
+      },
+      {
+        "phq9_index": 4,
+        "followup": "Have you experienced appetite changes since giving birth, or is feeding the baby affecting your eating?"
+      },
+      {
+        "phq9_index": 5,
+        "followup": "Are you having thoughts of being a bad mother or failing at parenthood?"
+      },
+      {
+        "phq9_index": 6,
+        "followup": "Do you have trouble making parenting decisions or remembering baby care routines?"
+      },
+      {
+        "phq9_index": 7,
+        "followup": "Do you feel physically exhausted or like you're moving in slow motion throughout the day?"
+      },
+      {
+        "phq9_index": 8,
+        "followup": "Have you had thoughts that your baby would be better off without you, or that you're a danger to your child?"
+      }
+    ],
+    "work": [
+      {
+        "phq9_index": 0,
+        "followup": "Are you losing interest in work tasks, projects, or hobbies you used to enjoy outside of work?"
+      },
+      {
+        "phq9_index": 1,
+        "followup": "Is your mood low due to work stress, job dissatisfaction, or workplace conflicts?"
+      },
+      {
+        "phq9_index": 2,
+        "followup": "Is your sleep affected by work stress, or are you working late and losing sleep?"
+      },
+      {
+        "phq9_index": 3,
+        "followup": "Does your low energy make it hard to complete work tasks or commute to work?"
+      },
+      {
+        "phq9_index": 4,
+        "followup": "Are you eating less or more as a coping mechanism for work stress?"
+      },
+      {
+        "phq9_index": 5,
+        "followup": "Are you feeling like a failure at work, or doubting your professional abilities?"
+      },
+      {
+        "phq9_index": 6,
+        "followup": "Are you having trouble concentrating on work or making work-related decisions?"
+      },
+      {
+        "phq9_index": 7,
+        "followup": "Do you feel physically drained or restless during your workday?"
+      },
+      {
+        "phq9_index": 8,
+        "followup": "Have you thought about harming yourself or that you'd be better off dead due to work stress?"
+      }
+    ],
+    "school": [
+      {
+        "phq9_index": 0,
+        "followup": "Have you lost interest in studying, attending classes, or extracurricular activities?"
+      },
+      {
+        "phq9_index": 1,
+        "followup": "Is your mood low due to academic pressure, peer conflicts, or school stress?"
+      },
+      {
+        "phq9_index": 2,
+        "followup": "Is your sleep affected by academic stress, or are you staying up late to study?"
+      },
+      {
+        "phq9_index": 3,
+        "followup": "Does your low energy affect your ability to attend classes or focus on schoolwork?"
+      },
+      {
+        "phq9_index": 4,
+        "followup": "Have your eating habits changed due to school stress or missing meals while studying?"
+      },
+      {
+        "phq9_index": 5,
+        "followup": "Are you feeling like a failure academically or doubting your intelligence?"
+      },
+      {
+        "phq9_index": 6,
+        "followup": "Do you have trouble concentrating on schoolwork or understanding your classes?"
+      },
+      {
+        "phq9_index": 7,
+        "followup": "Do you feel physically sluggish or restless during school days?"
+      },
+      {
+        "phq9_index": 8,
+        "followup": "Have you had thoughts of harming yourself due to academic or social pressure at school?"
+      }
+    ],
+    "relationship": [
+      {
+        "phq9_index": 0,
+        "followup": "Have you lost interest in intimacy or activities you used to enjoy with your partner or loved ones?"
+      },
+      {
+        "phq9_index": 1,
+        "followup": "Is your low mood related to relationship conflicts, lack of support, or feelings of loneliness?"
+      },
+      {
+        "phq9_index": 2,
+        "followup": "Is relationship stress affecting your sleep, or do you lay awake worrying about the relationship?"
+      },
+      {
+        "phq9_index": 3,
+        "followup": "Do you feel too tired to invest energy in your relationship or spending time with loved ones?"
+      },
+      {
+        "phq9_index": 4,
+        "followup": "Have you noticed appetite changes related to relationship stress or emotional pain?"
+      },
+      {
+        "phq9_index": 5,
+        "followup": "Are you blaming yourself for the relationship problems or feeling like you're not good enough?"
+      },
+      {
+        "phq9_index": 6,
+        "followup": "Do you have trouble making relationship decisions or remembering important details about your loved ones?"
+      },
+      {
+        "phq9_index": 7,
+        "followup": "Do you feel physically heavy or restless due to relationship tension?"
+      },
+      {
+        "phq9_index": 8,
+        "followup": "Have you had thoughts that you would be better off dead or that your loved ones would be better off without you?"
+      }
+    ],
+    "loss": [
+      {
+        "phq9_index": 0,
+        "followup": "Have you lost interest in activities because everything feels meaningless since your loss?"
+      },
+      {
+        "phq9_index": 1,
+        "followup": "Are you experiencing deep sadness or hopelessness related to grief from your loss?"
+      },
+      {
+        "phq9_index": 2,
+        "followup": "Is your sleep disrupted by grief-related thoughts or the absence of the person you lost?"
+      },
+      {
+        "phq9_index": 3,
+        "followup": "Are you struggling to find energy for daily activities because of your grief?"
+      },
+      {
+        "phq9_index": 4,
+        "followup": "Have you changed how much you eat as part of your grief process?"
+      },
+      {
+        "phq9_index": 5,
+        "followup": "Are you feeling guilty about the loss, or blaming yourself in any way?"
+      },
+      {
+        "phq9_index": 6,
+        "followup": "Is grief making it hard to concentrate or make decisions about moving forward?"
+      },
+      {
+        "phq9_index": 7,
+        "followup": "Do you feel physically slowed down or restless as part of your grief?"
+      },
+      {
+        "phq9_index": 8,
+        "followup": "Have you had thoughts that you would be better off dead or want to be with the person you lost?"
+      }
+    ],
+    "general": [
+      {
+        "phq9_index": 0,
+        "followup": "Can you tell me more about what used to interest you and what's changed?"
+      },
+      {
+        "phq9_index": 1,
+        "followup": "How much of the day are you feeling this way, and has it gotten worse recently?"
+      },
+      {
+        "phq9_index": 2,
+        "followup": "Are there any major stressors or life changes affecting your sleep?"
+      },
+      {
+        "phq9_index": 3,
+        "followup": "How is your low energy affecting your daily functioning and responsibilities?"
+      },
+      {
+        "phq9_index": 4,
+        "followup": "Are there any medical reasons for your appetite changes, or could stress be a factor?"
+      },
+      {
+        "phq9_index": 5,
+        "followup": "What specifically are you feeling bad about yourself for?"
+      },
+      {
+        "phq9_index": 6,
+        "followup": "Does your concentration difficulty affect your work, school, or personal relationships?"
+      },
+      {
+        "phq9_index": 7,
+        "followup": "How long have you been noticing these changes in your movement or restlessness?"
+      },
+      {
+        "phq9_index": 8,
+        "followup": "Have you ever acted on these thoughts or do you have a plan? This is very important to discuss."
+      }
+    ]
+  },
+  "depression_detailed": [
+    {
+      "index": 0,
+      "category": "Cognitive Symptoms - Future Outlook",
+      "conversational": "When you think about your future, does it feel hopeful or uncertain and hopeless?",
+      "formal": "Hopelessness and negative expectations",
+      "instrument": "BDI-II",
+      "reasons": ["Hopelessness", "Pessimistic thinking", "Helplessness", "Worthlessness"]
+    },
+    {
+      "index": 1,
+      "category": "Shame & Self-Blame",
+      "conversational": "Have you been blaming or criticizing yourself more than usual?",
+      "formal": "Shame, self-blame, and excessive guilt",
+      "instrument": "HAM-D/BDI-II",
+      "reasons": ["Excessive guilt", "Self-blame", "Shame", "Worthlessness"]
+    },
+    {
+      "index": 2,
+      "category": "Concentration & Decision Making",
+      "conversational": "How is your concentration and decision-making these days?",
+      "formal": "Concentration difficulty and reduced decisiveness",
+      "instrument": "HAM-D/PHQ-9",
+      "reasons": ["Poor concentration", "Decision difficulty", "Cognitive fog", "Mental slowness"]
+    },
+    {
+      "index": 3,
+      "category": "Physical Activity & Motivation",
+      "conversational": "How has your motivation and activity level been recently?",
+      "formal": "Loss of motivation and reduced physical activity",
+      "instrument": "CES-D/HAM-D",
+      "reasons": ["Low motivation", "Fatigue", "Inactivity", "Psychomotor slowing"]
+    },
+    {
+      "index": 4,
+      "category": "Sleep Disturbance",
+      "conversational": "How has your sleep been: trouble falling asleep, staying asleep, or oversleeping?",
+      "formal": "Sleep disturbance patterns",
+      "instrument": "HAM-D/BDI-II",
+      "reasons": ["Early awakening", "Insomnia", "Hypersomnia", "Unrefreshing sleep"]
+    },
+    {
+      "index": 5,
+      "category": "Appetite & Weight Changes",
+      "conversational": "Have you noticed appetite or weight changes recently?",
+      "formal": "Appetite and weight changes",
+      "instrument": "HAM-D/PHQ-9",
+      "reasons": ["Reduced appetite", "Increased appetite", "Weight loss", "Weight gain"]
+    },
+    {
+      "index": 6,
+      "category": "Anhedonia - Loss of Pleasure",
+      "conversational": "Do activities you used to enjoy still feel enjoyable?",
+      "formal": "Anhedonia and loss of interest in activities",
+      "instrument": "BDI-II/CES-D",
+      "reasons": ["Loss of interest", "No pleasure", "Withdrawal", "Emotional numbness"]
+    },
+    {
+      "index": 7,
+      "category": "Irritability & Anger",
+      "conversational": "Have you been more irritable or angry than usual?",
+      "formal": "Irritability and increased anger/frustration",
+      "instrument": "BDI-II/CES-D",
+      "reasons": ["Irritability", "Anger", "Impatience", "Low frustration tolerance"]
+    },
+    {
+      "index": 8,
+      "category": "Suicidal Ideation - Critical Safety",
+      "conversational": "I need to ask directly: have you had thoughts of self-harm or that others may be better off without you?",
+      "formal": "Suicidal ideation and self-harm thoughts",
+      "instrument": "PHQ-9/HAM-D",
+      "reasons": ["Passive death wish", "Active ideation", "Plan", "Attempt"],
+      "suicide_risk": true
+    }
+  ],
+  "pcl5": [
+    {
+      "index": 0,
+      "dsm5_criterion": "Intrusion B1",
+      "category": "Intrusive Memories",
+      "conversational": "Have unwanted memories or flashbacks of the event been coming back when you don't want them to?",
+      "formal": "Repeated, involuntary, and intrusive distressing memories"
+    },
+    {
+      "index": 1,
+      "dsm5_criterion": "Intrusion B2",
+      "category": "Nightmares",
+      "conversational": "Have you had disturbing dreams or nightmares about what happened?",
+      "formal": "Repeated disturbing dreams related to the traumatic event"
+    },
+    {
+      "index": 2,
+      "dsm5_criterion": "Intrusion B3",
+      "category": "Dissociative Reactions",
+      "conversational": "Do you feel like the event is happening again in the moment?",
+      "formal": "Dissociative reactions (flashbacks)"
+    },
+    {
+      "index": 3,
+      "dsm5_criterion": "Intrusion B4",
+      "category": "Emotional Distress with Reminders",
+      "conversational": "How distressed do you feel emotionally when something reminds you of the event?",
+      "formal": "Psychological distress at reminder cues"
+    },
+    {
+      "index": 4,
+      "dsm5_criterion": "Intrusion B5",
+      "category": "Physical Reactions to Reminders",
+      "conversational": "Do reminders trigger physical reactions like racing heart, sweating, or shakiness?",
+      "formal": "Physiological reactivity to trauma reminders"
+    },
+    {
+      "index": 5,
+      "dsm5_criterion": "Avoidance C1",
+      "category": "Avoidance of Thoughts/Feelings",
+      "conversational": "Do you avoid thoughts or feelings connected to what happened?",
+      "formal": "Avoidance of trauma-related thoughts/feelings"
+    },
+    {
+      "index": 6,
+      "dsm5_criterion": "Avoidance C2",
+      "category": "Avoidance of External Reminders",
+      "conversational": "Do you avoid places, people, or situations that remind you of the event?",
+      "formal": "Avoidance of external reminders"
+    },
+    {
+      "index": 7,
+      "dsm5_criterion": "Negative Mood D1",
+      "category": "Memory Gaps",
+      "conversational": "Do you have gaps in memory about key parts of what happened?",
+      "formal": "Inability to recall aspects of the traumatic event"
+    },
+    {
+      "index": 8,
+      "dsm5_criterion": "Negative Mood D2",
+      "category": "Negative Beliefs",
+      "conversational": "Have you developed persistent negative beliefs about yourself or the world since the event?",
+      "formal": "Persistent negative beliefs or expectations"
+    },
+    {
+      "index": 9,
+      "dsm5_criterion": "Negative Mood D3",
+      "category": "Blame",
+      "conversational": "Do you strongly blame yourself or others for what happened?",
+      "formal": "Persistent exaggerated blame"
+    },
+    {
+      "index": 10,
+      "dsm5_criterion": "Negative Mood D4",
+      "category": "Negative Emotions",
+      "conversational": "Are fear, anger, guilt, or shame frequently present for you?",
+      "formal": "Persistent negative emotional state"
+    },
+    {
+      "index": 11,
+      "dsm5_criterion": "Negative Mood D5",
+      "category": "Loss of Interest",
+      "conversational": "Have you lost interest in important activities since the event?",
+      "formal": "Diminished interest in activities"
+    },
+    {
+      "index": 12,
+      "dsm5_criterion": "Negative Mood D6",
+      "category": "Detachment",
+      "conversational": "Do you feel detached or cut off from other people?",
+      "formal": "Detachment or estrangement from others"
+    },
+    {
+      "index": 13,
+      "dsm5_criterion": "Negative Mood D7",
+      "category": "Numbness",
+      "conversational": "Do you struggle to feel positive emotions like love, joy, or calm?",
+      "formal": "Inability to experience positive emotions"
+    },
+    {
+      "index": 14,
+      "dsm5_criterion": "Hyperarousal E1",
+      "category": "Hypervigilance",
+      "conversational": "Do you feel constantly on guard or scanning for danger?",
+      "formal": "Hypervigilance"
+    },
+    {
+      "index": 15,
+      "dsm5_criterion": "Hyperarousal E2",
+      "category": "Startle Response",
+      "conversational": "Are you more jumpy or easily startled than before?",
+      "formal": "Exaggerated startle response"
+    },
+    {
+      "index": 16,
+      "dsm5_criterion": "Hyperarousal E3",
+      "category": "Irritability/Aggression",
+      "conversational": "Have you felt more irritable, angry, or aggressive recently?",
+      "formal": "Irritability or aggressive behavior"
+    },
+    {
+      "index": 17,
+      "dsm5_criterion": "Hyperarousal E4",
+      "category": "Risk-Taking",
+      "conversational": "Have you engaged in risky or self-destructive behaviors since the event?",
+      "formal": "Reckless or self-destructive behavior"
+    },
+    {
+      "index": 18,
+      "dsm5_criterion": "Hyperarousal E5",
+      "category": "Concentration Problems",
+      "conversational": "Have you had trouble concentrating or staying focused?",
+      "formal": "Concentration problems"
+    },
+    {
+      "index": 19,
+      "dsm5_criterion": "Hyperarousal E6",
+      "category": "Sleep Disturbance",
+      "conversational": "Has your sleep been disturbed by trouble falling asleep, staying asleep, or restless sleep?",
+      "formal": "Sleep disturbance"
+    }
+  ]
+}

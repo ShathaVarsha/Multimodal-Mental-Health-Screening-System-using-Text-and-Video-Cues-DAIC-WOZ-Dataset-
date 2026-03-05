@@ -1,378 +1,282 @@
-# Multimodal Depression Screening System
-
-A comprehensive depression detection system using multimodal analysis combining:
-- **Questionnaire-based assessment** (PHQ-9)
-- **Facial expression analysis** (Action Units, micro-expressions)
-- **Speech/Audio analysis** (COVAREP features)
-- **Natural language processing** (Linguistic features from transcripts)
-
-## Overview
-
-This system analyzes depression severity by fusing three independent modalities into an integrated assessment. Built on the DAIC-WOZ dataset with 142 participants (42 depressed, 100 control).
-
-**Key Features:**
-- REST API backend for depression screening sessions
-- Real-time multimodal analysis
-- Crisis risk assessment
-- Comprehensive clinical reporting
-- Micro-expression detection
-- Hybrid deep learning models (CNN, RNN, GCN)
-
-## System Architecture
-
-```
-┌─────────────────────────────────────────────────────┐
-│           PRESENTATION LAYER (Frontend)             │
-│         (Web app, Mobile, API Client)               │
-└────────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────────┐
-│          FLASK REST API (Port 5000)                 │
-│  /api/session | /api/questionnaire | /api/video    │
-│  /api/text | /api/predict | /api/report            │
-└────────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────────┐
-│         BUSINESS LOGIC LAYER (Services)             │
-│  ┌──────────────┐  ┌──────────────┐  ┌────────────┐ │
-│  │ Video        │  │ Text         │  │ Hybrid     │ │
-│  │ Analyzer     │  │ Analyzer     │  │ Model      │ │
-│  └──────────────┘  └──────────────┘  └────────────┘ │
-│  ┌──────────────┐  ┌──────────────┐                  │
-│  │Feature       │  │Report        │                  │
-│  │Extractor     │  │Generator     │                  │
-│  └──────────────┘  └──────────────┘                  │
-└────────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────────┐
-│      FUSION ENGINE & SESSION MANAGEMENT             │
-│  Integrates results | Calculates risk | Stores data │
-└────────────────────────────────────────────────────┘
-                        ↓
-┌─────────────────────────────────────────────────────┐
-│         DATA LAYER (DAIC-WOZ Dataset)               │
-│  AU Features | HOG | COVAREP | Transcripts | Labels │
-└────────────────────────────────────────────────────┘
-```
-
-## Quick Start
-
-### Prerequisites
-- Python 3.8+
-- pip (Python package manager)
-
-### Installation
-
-1. **Clone/Download the project:**
-   ```bash
-   cd ROBO_Project2
-   ```
-
-2. **Create virtual environment:**
-   ```bash
-   python -m venv .venv
-   .venv\Scripts\Activate.ps1  # On Windows PowerShell
-   # or
-   source .venv/bin/activate   # On Linux/Mac
-   ```
-
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-### Running the System
-
-#### 1. Start the Flask API Server
-```bash
-python -m backend.app
-```
-API available at `http://localhost:5000/`
-
-#### 2. Train Models
-```bash
-# Train hybrid depression model
-python ml_training/train_hybrid_42_10_2.py
-
-# Train micro-expression detector
-python ml_training/train_microexpression_model.py
-```
-
-#### 3. Evaluate Models
-```bash
-python ml_training/evaluate_models.py
-```
-
-## API Endpoints
-
-### Session Management
-- `POST /api/session/create` - Create new screening session
-- `GET /api/session/<session_id>` - Get session data
-- `POST /api/session/<session_id>/delete` - Delete session
-
-### Questionnaire
-- `GET /api/questionnaire/questions` - Get PHQ-9 questions
-- `POST /api/questionnaire/<session_id>/submit` - Submit responses
-
-### Video Analysis
-- `POST /api/video/analyze/<participant_id>` - Analyze video
-- `POST /api/microexpression/detect/<participant_id>` - Detect micro-expressions
-
-### Text Analysis
-- `POST /api/text/analyze` - Analyze transcript
-
-### Depression Prediction
-- `POST /api/predict/depression/<participant_id>` - Predict depression severity
-
-### Assessment & Reporting
-- `POST /api/assessment/fused/<session_id>` - Generate multimodal assessment
-- `POST /api/report/generate/<session_id>` - Generate clinical report
-
-## Project Structure
-
-```
-ROBO_Project2/
-├── backend/                          # Flask backend
-│   ├── app.py                       # Main Flask application
-│   ├── __init__.py
-│   ├── session_manager.py           # Session state management
-│   ├── questionnaire.py             # PHQ-9 questionnaire logic
-│   ├── video_analyzer.py            # Video feature extraction
-│   ├── fusion_engine.py             # Multimodal fusion
-│   └── services/
-│       ├── feature_extractor.py     # AU, HOG, audio feature extraction
-│       ├── hybrid_model.py          # Depression prediction model
-│       ├── microexpression_service.py # Micro-expression detection
-│       ├── llm_service.py           # Text analysis
-│       └── report_generator.py      # Clinical report generation
-│
-├── ml_training/                      # ML training pipelines
-│   ├── train_hybrid_42_10_2.py      # Train depression classifier
-│   ├── train_microexpression_model.py
-│   ├── extract_features_for_participants.py
-│   ├── evaluate_models.py           # Model evaluation
-│   ├── saved_models/                # Pre-trained models
-│   ├── micro_expression_models/
-│   ├── saved_features/
-│   └── training_logs/
-│
-├── data/                             # DAIC-WOZ dataset
-│   ├── 300/ ... 484/                # Participant folders
-│   │   ├── {id}_CLNF_AUs.txt       # Facial Action Units
-│   │   ├── {id}_CLNF_hog.txt       # HOG features
-│   │   ├── {id}_CLNF_pose.txt      # Head pose
-│   │   ├── {id}_CLNF_gaze.txt      # Gaze direction
-│   │   ├── {id}_COVAREP.csv        # Audio features
-│   │   ├── {id}_FORMANT.csv        # Formant features
-│   │   └── {id}_TRANSCRIPT.csv     # Interview transcript
-│   └── DEPRESSION/                  # Depression labels
-│
-├── outputs/                          # Generated reports/plots
-│   ├── plots/
-│   ├── reports/
-│
-├── requirements.txt                  # Python dependencies
-├── README.md                         # This file
-└── train_split_Depression_AVEC2017.csv # Train/test splits
-```
-
-## Data Format
-
-### Facial Features (AU - Action Units)
-- **File**: `{participant_id}_CLNF_AUs.txt`
-- **Format**: Text file with comma/space-separated values
-- **Dimensions**: Frames × 17 AUs (Action Units)
-- **Range**: 0-5
-
-### Audio Features (COVAREP)
-- **File**: `{participant_id}_COVAREP.csv`
-- **Features**: F0 (pitch), energy, spectral features
-- **Dimensions**: Frames × ~74 acoustic features
-
-### Transcripts
-- **File**: `{participant_id}_TRANSCRIPT.csv`
-- **Format**: CSV with speaker labels and text
-
-### Depression Labels
-- **File**: `train_split_Depression_AVEC2017.csv`
-- **Format**: CSV with participant_id and binary label
-- **Classes**: 0 = Control, 1 = Depressed
-
-## Key Algorithms
-
-### 1. Hybrid Depression Model
-**Components:**
-- **Video Stream**: AU activations → Depression indicators (sadness AUs: 1, 4, 15)
-- **Audio Stream**: F0, energy → Vocal cues (low pitch, reduced energy)
-- **Text Stream**: Semantic analysis → Rumination, negative cognitions
-
-**Fusion Method:** Weighted average
-- Video weight: 40%
-- Audio weight: 30%
-- Text weight: 30%
-
-### 2. Micro-Expression Detection
-- **Input**: AU temporal sequences
-- **Method**: AU velocity + pattern matching
-- **Expressions Detected**: Sadness, fear, disgust, contempt
-- **Timing**: Frame-by-frame analysis
-
-### 3. Multimodal Fusion
-```
-Depression Probability = 0.4*Video + 0.3*Audio + 0.3*Text
-Severity = Categories[0.2, 0.4, 0.6, 0.8]  → [Minimal, Mild, Moderate, Severe]
-Risk Level = Function(Probability, Suicide_Risk, Agreement)
-```
-
-## Depression Severity Classification
-
-| Score | Severity | PHQ-9 | Interpretation |
-|-------|----------|-------|-----------------|
-| 0-0.2 | Minimal | 0-4 | No significant symptoms |
-| 0.2-0.4 | Mild | 5-9 | Symptoms present; monitor |
-| 0.4-0.6 | Moderate | 10-14 | Clinical concern |
-| 0.6-0.8 | Mod. Severe | 15-19 | Treatment recommended |
-| 0.8-1.0 | Severe | 20-27 | Urgent intervention needed |
-
-## Example Usage
-
-### Python Client
-```python
-import requests
-import json
-
-# Create session
-resp = requests.post('http://localhost:5000/api/session/create')
-session_id = resp.json()['session_id']
-
-# Submit PHQ-9
-phq_responses = [1, 2, 1, 2, 0, 1, 2, 1, 0]  # 9 responses
-resp = requests.post(
-    f'http://localhost:5000/api/questionnaire/{session_id}/submit',
-    json={'responses': phq_responses}
-)
-print(f"PHQ-9 Score: {resp.json()['score']}")
-
-# Analyze video
-resp = requests.post(f'http://localhost:5000/api/video/analyze/300')
-print(f"Depression indicators: {resp.json()['video_analysis']}")
-
-# Generate report
-report_data = {
-    'participant_id': 300,
-    'video_analysis': resp.json()['video_analysis'],
-    'text_analysis': {...}
-}
-resp = requests.post(
-    f'http://localhost:5000/api/report/generate/{session_id}',
-    json=report_data
-)
-report = resp.json()['report']
-```
-
-## Model Performance
-
-### Hybrid Model (42-10-2 Split)
-- **Accuracy**: ~78%
-- **Precision**: ~82%
-- **Recall**: ~75%
-- **F1-Score**: ~0.78
-
-### Micro-Expression Detector
-- **Detection Rate**: ~85% for sadness features
-- **False Positive Rate**: ~15%
-- **Onset Detection**: ±50ms accuracy
-
-## Crisis Assessment
-
-**Crisis Risk Triggered By:**
-1. Positive response to PHQ-9 question 9 (suicide)
-2. Depression probability > 0.85
-3. Combined modality agreement on severe depression
-
-**Action Items:**
-- Immediate mental health professional referral
-- Safety assessment and planning
-- Crisis hotline: **988 (US)**
-
-## Configuration
-
-Environment variables (in `.env`):
-```
-FLASK_ENV=development
-FLASK_DEBUG=True
-DATA_DIR=data
-MODEL_DIR=ml_training/saved_models
-LOG_LEVEL=INFO
-```
-
-## Training Data
-
-**Dataset**: DAIC-WOZ (Database of Multimodal Interactions with Computers)
-- **Total participants**: 142
-- **Depressed**: 42 (clinician-diagnosed)
-- **Control**: 100
-- **Interview duration**: ~16 minutes per participant
-- **Modalities**: Video, audio, transcript
-
-### Splits
-- **Training**: 107 participants (42 depressed, 65 control)
-- **Development**: 10 participants
-- **Test**: 25 participants
-
-## Performance Optimization
-
-### Feature Extraction
-- Cache feature vectors after first extraction
-- Parallelize participant processing
-- Use memory-mapped arrays for large features
-
-### Model Inference
-- Batch process predictions
-- GPU acceleration for deep models (if available)
-- Model quantization for deployment
-
-## Troubleshooting
-
-### Common Issues
-
-**Issue**: `ModuleNotFoundError: No module named 'backend'`
-- **Solution**: Ensure you're running from project root and virtual environment activated
-
-**Issue**: `FileNotFoundError: data/300/_CLNF_AUs.txt`
-- **Solution**: Check DAIC-WOZ data is properly placed in `data/` directory
-
-**Issue**: Port 5000 already in use
-- **Solution**: `flask run --port 5001` or kill existing process
-
-## Contributing
-
-To contribute improvements:
-1. Create feature branch: `git checkout -b feature/improvement`
-2. Commit changes: `git commit -m "Add improvement"`
-3. Push: `git push origin feature/improvement`
-4. Submit pull request
-
-## License
-
-Academic use - DAIC-WOZ dataset terms apply
-
-## References
-
-**Key Papers:**
-- Ringeval et al. (2019) - DAIC-WOZ Challenge
-- Ekman & Friesen - Facial Action Coding System (FACS)
-- Valstar et al. - Depression detection from facial expressions
-
-**Datasets:**
-- [DAIC-WOZ: AVEC Challenge 2017](https://decoda.org/interact/daic-woz/)
-
-## Contact & Support
-
-For issues, questions, or feature requests, refer to project documentation or create an issue.
+# Multimodal Mental Health Screening System (Text + Video)
+
+This project is a Flask-based backend + web client pipeline for screening depression/PTSD signals from:
+- Conversational questionnaires (PHQ-9, detailed depression, PCL-5)
+- Video-derived facial Action Units (AUs)
+- Text responses interpreted into assessment scales
+- Fused multimodal scoring and report generation
+
+It is designed around DAIC-WOZ style participant folders and split files in this repository.
 
 ---
 
-**Last Updated**: March 2026
-**Version**: 2.0
-**Status**: Production Ready
+## 1) What is implemented
+
+### Core capabilities
+- Session-based assessment workflow (`/api/session/*`)
+- Conversational questionnaire APIs with scenario personalization
+- Scenario-specific PHQ-9 follow-up questions loaded from data files
+- Text response interpretation (natural language -> 0..3 scale)
+- Video processing + AU extraction + AU activation detection
+- Video + text depression severity prediction (audio currently disabled in fusion)
+- Fused risk output + report generation
+
+### Current model/fusion behavior
+- `HybridDepressionModel` uses **video + text** weighting:
+  - video: `0.6`
+  - text: `0.4`
+- Audio score is intentionally set to `None` in prediction flow.
+- AU detector reports **individual AU activations** (e.g., `AU1 - Inner brow raiser`) instead of emotion labels.
+
+---
+
+## 2) Repository structure
+
+```text
+ROBO_Project2/
+├─ backend/
+│  ├─ app.py                          # Main Flask API (all routes)
+│  ├─ session_manager.py              # Session lifecycle/state
+│  ├─ questionnaire.py                # PHQ-9 schema/validation/scoring
+│  ├─ fusion_engine.py                # Multimodal fusion logic
+│  ├─ video_analyzer.py               # Participant-level video analysis
+│  └─ services/
+│     ├─ assessment_data_loader.py    # Loads question bank + split divisions
+│     ├─ feature_extractor.py         # Feature loading/extraction helpers
+│     ├─ hybrid_model.py              # Video+text severity inference
+│     ├─ llm_service.py               # Text feature analysis
+│     ├─ microexpression_service.py   # AU activation detector
+│     ├─ report_generator.py          # Clinical-style report payloads
+│     ├─ text_interpreter.py          # NLP response interpretation + scenario detect
+│     └─ video_processor.py           # Uploaded video processing path
+│
+├─ ml_training/
+│  ├─ train_complete_pipeline.py      # Multi-model training pipeline
+│  ├─ train_hybrid_42_10_2.py         # Hybrid setup training
+│  ├─ train_microexpression_model.py  # AU/microexpression-related training
+│  ├─ extract_features_for_participants.py
+│  ├─ evaluate_models.py
+│  ├─ model_usage_examples.py
+│  └─ MODEL_LOADING_GUIDE.py
+│
+├─ data/
+│  ├─ question_bank.json              # PHQ-9, detailed, PCL-5, scenario followups
+│  └─ <participant_id>/               # AU/gaze/pose/transcript/etc files
+│
+├─ test_client.html                   # Browser UI client
+├─ requirements.txt
+└─ README.md
+```
+
+---
+
+## 3) Data contracts used by code
+
+### Questionnaire bank
+`data/question_bank.json` is expected to contain sections such as:
+- `phq9`
+- `depression_detailed`
+- `pcl5`
+- `phq9_scenario_followups` (keyed by scenario, each list mapped by `phq9_index`)
+
+### Participant split files
+Read by `AssessmentDataLoader.get_divisions()`:
+- `train_split_Depression_AVEC2017.csv`
+- `test_split_Depression_AVEC2017.csv`
+- `dev_split_Depression_AVEC2017.csv`
+- `full_test_split.csv`
+
+### Participant folder example
+For participant `300`:
+- `data/300/300_CLNF_AUs.txt`
+- `data/300/300_CLNF_gaze.txt`
+- `data/300/300_CLNF_pose.txt`
+- `data/300/300_TRANSCRIPT.csv`
+- (other files may exist and be used by training scripts)
+
+---
+
+## 4) Backend API reference (from `backend/app.py`)
+
+### Session routes
+- `POST /api/session/create`
+- `GET /api/session/<session_id>`
+- `POST /api/session/<session_id>/delete`
+
+### Questionnaire routes
+- `GET /api/questionnaire/questions`
+- `POST /api/questionnaire/<session_id>/submit`
+
+### Conversational assessment routes
+- `POST /api/assessment/conversational/interpret`
+- `GET /api/assessment/conversational/phq9`
+- `GET /api/assessment/conversational/pcl5`
+- `GET /api/assessment/conversational/depression-detailed`
+- `GET /api/assessment/divisions`
+- `POST /api/assessment/conversational/scenario-identify`
+- `POST /api/assessment/conversational/submit`
+
+### Video/text/prediction routes
+- `POST /api/video/analyze/<int:participant_id>`
+- `POST /api/microexpression/detect/<int:participant_id>`
+- `POST /api/video/upload-and-analyze`
+- `POST /api/text/analyze`
+- `POST /api/predict/depression/<int:participant_id>`
+
+### Fusion/report/health
+- `POST /api/assessment/fused/<session_id>`
+- `POST /api/report/generate/<session_id>`
+- `GET /api/health`
+- `GET /`
+
+---
+
+## 5) Setup (Windows PowerShell)
+
+```powershell
+cd C:\Users\abhis\OneDrive\Desktop\sem_6\ROBO_Project2
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+If execution policy blocks activation:
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\.venv\Scripts\Activate.ps1
+```
+
+---
+
+## 6) Run the app
+
+### Terminal 1: Backend
+```powershell
+python -m backend.app
+```
+Expected base URL: `http://localhost:5000`
+
+### Terminal 2: Frontend client
+```powershell
+python -m http.server 8000
+```
+Open: `http://localhost:8000/test_client.html`
+
+---
+
+## 7) Quick API smoke tests
+
+### Health
+```powershell
+Invoke-WebRequest http://localhost:5000/api/health -UseBasicParsing | Select-Object -ExpandProperty Content
+```
+
+### Get PHQ-9 conversational questions with followups
+```powershell
+Invoke-WebRequest "http://localhost:5000/api/assessment/conversational/phq9?scenario=postpartum" -UseBasicParsing |
+  Select-Object -ExpandProperty Content
+```
+
+### Interpret free-text response into scale
+```powershell
+$body = @{ response = "I feel low almost every day"; question = "How have you been feeling?" } | ConvertTo-Json
+Invoke-WebRequest -Uri http://localhost:5000/api/assessment/conversational/interpret -Method POST -ContentType "application/json" -Body $body -UseBasicParsing |
+  Select-Object -ExpandProperty Content
+```
+
+---
+
+## 8) Training scripts guide (`ml_training`)
+
+### Main training/evaluation scripts
+- `train_complete_pipeline.py`
+  - Trains multiple expert models across modalities
+  - Includes feature loaders for AU, gaze, pose, landmarks, audio, transcript
+  - Saves models to `ml_training/saved_models/`
+- `train_hybrid_42_10_2.py`
+  - Hybrid workflow using predefined participant split
+- `train_microexpression_model.py`
+  - Training flow related to AU/microexpression modeling
+- `evaluate_models.py`
+  - Evaluates saved models and prints metrics
+- `extract_features_for_participants.py`
+  - Batch feature extraction helper
+
+Run examples:
+```powershell
+python ml_training\train_complete_pipeline.py
+python ml_training\train_hybrid_42_10_2.py
+python ml_training\train_microexpression_model.py
+python ml_training\evaluate_models.py
+```
+
+---
+
+## 9) AU detector behavior (current)
+
+`backend/services/microexpression_service.py` currently detects **individual AU activations** from AU intensity time series.
+
+### Key parameters
+- `PEAK_DETECTION_THRESHOLD = 0.05`
+- `PATTERN_ACTIVATION_THRESHOLD = 0.12`
+- `CONFIDENCE_THRESHOLD = 0.2`
+- `MINIMUM_FRAMES = 2`
+
+### Output format (per detection)
+- `expression`: e.g., `AU12 - Lip corner puller`
+- `au_index`
+- `au_name`
+- `confidence`
+- `start_time`, `peak_time`, `end_time`, `duration`
+- `intensity`
+- `question_id` (if provided)
+
+---
+
+## 10) Important implementation notes
+
+- Audio is still present in some data/training scripts, but runtime fusion in `HybridDepressionModel` is currently video+text.
+- `requirements.txt` includes both classic ML and deep learning stacks (scikit-learn, TensorFlow, PyTorch).
+- `AssessmentDataLoader` gracefully falls back to empty results if files are missing.
+- PHQ-9 endpoint supports scenario followups through `data/question_bank.json`.
+
+---
+
+## 11) Troubleshooting
+
+### Backend exits immediately
+1. Ensure venv is active.
+2. Install dependencies again: `pip install -r requirements.txt`.
+3. Run with full error output:
+   ```powershell
+   python -m backend.app
+   ```
+4. Check file paths exist (`data/`, split CSVs, question bank).
+
+### Port already in use
+```powershell
+taskkill /F /IM python.exe
+```
+Then restart backend/frontend.
+
+### No AU detections
+- Verify AU file has numeric intensity columns.
+- Check participant folder and filename formatting.
+- Increase `time_window` or lower thresholds carefully.
+
+---
+
+## 12) Minimal end-to-end flow
+
+1. Create session.
+2. Load conversational PHQ-9 with scenario.
+3. Submit questionnaire responses.
+4. Analyze video/text.
+5. Run depression prediction.
+6. Generate fused assessment + report.
+
+---
+
+## 13) Disclaimer
+
+This system is for research/prototyping and screening support only. It is **not** a standalone diagnostic tool and should not replace licensed clinical evaluation.
