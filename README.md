@@ -285,7 +285,11 @@ pip install transformers
 For academic and research purposes only.
 
 ## 👨‍💻 Author
-
+- Abhistha H Mallaya
+- Kanishka S J
+- Shatha Varsha Sree T
+- Kavya Sri B
+  
 Depression Screening System v1.0  
 Built for Robotics Project (Semester 6)
 
